@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 13px 32px;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-container-low);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 16px;
+
+
+  &:hover {
+    transform: translateY(-2px);
+
+    &.primary {
+      border-color: var(--md-sys-color-primary);
+    }
+
+    &.secondary {
+      border-color: var(--md-sys-color-secondary);
+    }
+
+    &.tertiary {
+      border-color: var(--md-sys-color-tertiary);
+    }
+  }
+}

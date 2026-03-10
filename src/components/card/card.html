@@ -1,0 +1,36 @@
+<ng-template #contentTemplate>
+  @if(icons().length > 0) {
+  <div class="icons">
+    @for (icon of icons(); track icon) {
+    <i class="ph-bold" [class]="icon" aria-hidden="true"></i>
+
+    }
+  </div>
+  }
+  <span class="md-typescale-body-large title" [innerText]="title()"></span>
+  <span class="md-typescale-body-medium description" [innerText]="description()"></span>
+  @if(tags().length > 0) {
+  <div class="tags">
+    @for (tag of tags(); track tag) {
+    <div class="tag md-typescale-label-small">{{tag}}</div>
+    }
+  </div>
+  }
+  @if(link()) {
+  <div class="link-box">
+    <span [innerText]="linkText() || link()" class="md-typescale-label-medium"></span>
+    <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+  </div>
+  }
+</ng-template>
+
+
+@if (link()) {
+<a class="content-container" [class]="variant()" [href]="link()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</a>
+} @else {
+<div class="content-container" [class]="variant()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</div>
+}

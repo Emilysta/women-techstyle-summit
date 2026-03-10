@@ -1,0 +1,10 @@
+<a [class]="variant()" [href]="href()" [attr.target]="openInNewTab() ? '_blank' : null"
+  [attr.rel]="openInNewTab() ? 'noopener noreferrer' : null">
+  @if (icon() && iconPosition() === 'leading') {
+  <i class="ph md-typescale-label-medium" [class]="icon()" aria-hidden="true"></i>
+  }
+  <span class="md-typescale-label-medium"><ng-content /></span>
+  @if (icon() && iconPosition() === 'trailing') {
+  <i class="ph md-typescale-label-medium" [class]="icon()" aria-hidden="true"></i>
+  }
+</a>

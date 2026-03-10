@@ -1,0 +1,10 @@
+@if (href(); as link) {
+<a class="icon-link" [class]="variant()" [href]="link" [attr.aria-label]="ariaLabel()"
+  [attr.target]="openInNewTab() ? '_blank' : null" [attr.rel]="openInNewTab() ? 'noopener noreferrer' : null">
+  <i class="ph-fill" [class]="icon()" aria-hidden="true"></i>
+</a>
+} @else {
+<button type="button" class="icon-link" [class]="variant()" [attr.aria-label]="ariaLabel()">
+  <i class="ph-fill" [class]="icon()" aria-hidden="true"></i>
+</button>
+}

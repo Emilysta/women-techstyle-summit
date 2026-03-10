@@ -1,0 +1,12 @@
+main {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+
+  scroll-behavior: smooth;
+  font-family: var(--md-ref-typeface-plain);
+  padding: 40px;
+}
