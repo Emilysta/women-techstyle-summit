@@ -5,89 +5,89 @@
 
 :root {
   // Typeface refs (for mapping)
-  --md-ref-typeface-brand: 'Inter', system-ui, sans-serif;
+  --md-ref-typeface-brand: "Playfair Display", serif;
   --md-ref-typeface-plain: 'Inter', system-ui, sans-serif;
 
   // ---- Display (Inter) ----
   --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-display-large-size: 4.4rem;
-  --md-sys-typescale-display-large-line-height: 1.1;
+  --md-sys-typescale-display-large-line-height: 1.2;
   --md-sys-typescale-display-large-weight: 600;
 
   --md-sys-typescale-display-medium-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-display-medium-size: 3.6rem;
-  --md-sys-typescale-display-medium-line-height: 1.1;
+  --md-sys-typescale-display-medium-line-height: 1.2;
   --md-sys-typescale-display-medium-weight: 600;
 
   --md-sys-typescale-display-small-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-display-small-size: 2.8rem;
-  --md-sys-typescale-display-small-line-height: 1.1;
+  --md-sys-typescale-display-small-line-height: 1.2;
   --md-sys-typescale-display-small-weight: 600;
 
   // ---- Headline (Inter) ----
   --md-sys-typescale-headline-large-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-large-size: 3rem;
-  --md-sys-typescale-headline-large-line-height: 1.3;
+  --md-sys-typescale-headline-large-line-height: 1.2;
   --md-sys-typescale-headline-large-weight: 600;
 
   --md-sys-typescale-headline-medium-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-medium-size: 2.2rem;
-  --md-sys-typescale-headline-medium-line-height: 1.3;
+  --md-sys-typescale-headline-medium-line-height: 1.2;
   --md-sys-typescale-headline-medium-weight: 600;
 
   --md-sys-typescale-headline-small-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-small-size: 2rem;
-  --md-sys-typescale-headline-small-line-height: 1.3;
+  --md-sys-typescale-headline-small-line-height: 1.2;
   --md-sys-typescale-headline-small-weight: 600;
 
   // ---- Title (Inter) ----
   --md-sys-typescale-title-large-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-title-large-size: 1.6rem;
-  --md-sys-typescale-title-large-line-height: 1.1;
+  --md-sys-typescale-title-large-line-height: 1.2;
   --md-sys-typescale-title-large-weight: 600;
 
   --md-sys-typescale-title-medium-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-title-medium-size: 1.5rem;
-  --md-sys-typescale-title-medium-line-height: 1.1;
+  --md-sys-typescale-title-medium-line-height: 1.2;
   --md-sys-typescale-title-medium-weight: 600;
 
   --md-sys-typescale-title-small-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-title-small-size: 1.2rem;
-  --md-sys-typescale-title-small-line-height: 1.1;
+  --md-sys-typescale-title-small-line-height: 1.2;
   --md-sys-typescale-title-small-weight: 500;
 
   // ---- Body (Inter Tight) ----
   --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-large-size: 1.4rem;
-  --md-sys-typescale-body-large-line-height: 1.1;
+  --md-sys-typescale-body-large-line-height: 1.4;
   --md-sys-typescale-body-large-weight: 400;
 
   --md-sys-typescale-body-medium-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-medium-size: 1.2rem;
-  --md-sys-typescale-body-medium-line-height: 1.8;
+  --md-sys-typescale-body-medium-line-height: 1.4;
   --md-sys-typescale-body-medium-weight: 300;
 
   --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-small-size: 1rem;
-  --md-sys-typescale-body-small-line-height: 1.1;
+  --md-sys-typescale-body-small-line-height: 1.4;
   --md-sys-typescale-body-small-weight: 300;
 
   // ---- Label (Inter Tight) ----
   --md-sys-typescale-label-large-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-large-size: 1.2rem;
-  --md-sys-typescale-label-large-line-height: 1.1;
+  --md-sys-typescale-label-large-line-height: 1.4;
   --md-sys-typescale-label-large-weight: 300;
   --md-sys-typescale-label-large-weight-prominent: 400;
 
   --md-sys-typescale-label-medium-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-medium-size: 1rem;
-  --md-sys-typescale-label-medium-line-height: 1.5;
+  --md-sys-typescale-label-medium-line-height: 1.4;
   --md-sys-typescale-label-medium-weight: 300;
   --md-sys-typescale-label-medium-weight-prominent: 400;
 
   --md-sys-typescale-label-small-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-small-size: 0.8rem;
-  --md-sys-typescale-label-small-line-height: 1.2;
+  --md-sys-typescale-label-small-line-height: 1.4;
   --md-sys-typescale-label-small-weight: 300;
   --md-sys-typescale-label-small-weight-prominent: 400;
 }

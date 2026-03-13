@@ -1,3 +1,11 @@
-<main class="dark">
-  Initial content
+<main [class]="theme()" class="motion base">
+  <ng-container *ngComponentOutlet="currentStep()?.component; inputs: currentStep()?.inputs" />
+
+  <div class="actions-overlay">
+    <div class="actions-overlay-content">
+      <app-icon-button (buttonClick)="toggleTheme()" [icon]="theme() === 'dark' ? 'ph-moon' : 'ph-sun'"
+        variant="outlined" ariaLabel="Change color theme"></app-icon-button>
+      <app-stepper [allSteps]="steps" [initialStepIndex]="31" (currentStep)="handleStepChange($event)"></app-stepper>
+    </div>
+  </div>
 </main>

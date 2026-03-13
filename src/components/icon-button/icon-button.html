@@ -1,0 +1,5 @@
+<button [class]="variant()" (click)="buttonClick.emit($event)" [ariaLabel]="ariaLabel()">
+  @if (icon()) {
+  <i class="ph" [class]="icon()" aria-hidden="true"></i>
+  }
+</button>

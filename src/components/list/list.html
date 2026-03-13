@@ -1,0 +1,23 @@
+@if(listType() === 'unordered') {
+<ul class="md-typescale-body-large">
+  @for(point of listPoints(); track $index) {
+  <li>
+    <span [innerHTML]="point.text"></span>
+    @if(point.list && point.list.points.length > 0) {
+    <app-list [listPoints]="point.list.points" [listType]="point.list.type"></app-list>
+    }
+  </li>
+  }
+</ul>
+} @else {
+<ol class="md-typescale-body-large">
+  @for(point of listPoints(); track $index) {
+  <li>
+    <span [innerHTML]="point.text"></span>
+    @if(point.list && point.list.points.length > 0) {
+    <app-list [listPoints]="point.list.points" [listType]="point.list.type"></app-list>
+    }
+  </li>
+  }
+</ol>
+}

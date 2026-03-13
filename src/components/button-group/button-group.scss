@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  justify-content: center;
+
+  --accent-color: var(--md-sys-color-secondary);
+}
+
+[ngToolbar] {
+  display: flex;
+  padding: 6px 12px;
+  border-radius: calc(var(--border-radius) * 2);
+  gap: 8px;
+  border: var(--border-width) solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+[ngToolbarWidgetGroup] {
+  display: flex;
+  gap: 8px;
+}
+
+[ngToolbarWidget] {
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface);
+  transition-property: background-color, color, outline;
+  transition-duration: var(--motion-time);
+  transition-timing-function: var(--motion-function);
+}
+
+[ngToolbarWidget]:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);
+}
+
+[ngToolbarWidget]:active {
+  background-color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+}
+
+[ngToolbarWidget]:focus {
+  outline-offset: -var(--border-width);
+  outline: var(--border-width) solid color-mix(in srgb, var(--accent-color) 60%, transparent);
+}
+
+[ngToolbarWidget][aria-pressed="true"],
+[ngToolbarWidget][aria-checked="true"],
+[ngToolbarWidget][data-active="true"] {
+  color: color-mix(in srgb, var(--md-sys-color-on-surface) 95%, var(--accent-color));
+  background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);
+}

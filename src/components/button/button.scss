@@ -5,9 +5,13 @@ button {
   gap: 8px;
   border: none;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: calc(var(--border-radius) * 2);
   padding: 12px 28px;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition-property: background-color, color, border-color;
+  transition-duration: var(--motion-time);
+  transition-timing-function: var(--motion-function);
+  height: 48px;
+  box-sizing: border-box;
 
   i[class^='ph'] {
     flex-shrink: 0;
@@ -18,18 +22,56 @@ button {
     color: var(--md-sys-color-on-primary);
 
     &:hover {
-      filter: brightness(1.05);
+      background-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20));
     }
   }
 
   &.outlined {
     background-color: transparent;
     color: var(--md-sys-color-on-surface);
-    border: 1px solid var(--md-sys-color-outline);
+    border: var(--border-width) solid var(--md-sys-color-outline);
 
     &:hover {
       border-color: var(--md-sys-color-outline-variant);
       background-color: (from var(--md-sys-color-shadow) srgb r g b / 0.05);
+    }
+  }
+
+  &.shake {
+    &:hover {
+      animation: shake var(--motion-time) var(--motion-function) both;
+      transform: rotate(0, 0, 0);
+    }
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0turn);
+      }
+
+      25% {
+        transform: rotate(-0.1turn);
+      }
+
+      50% {
+        transform: rotate(0turn);
+      }
+
+      75% {
+        transform: rotate(0.1turn);
+      }
+
+      100% {
+        transform: rotate(0turn);
+      }
+    }
+  }
+
+  &.simple {
+    transition-property: background-color, color, border-color, transform, gap;
+
+    &:hover {
+      transform: translateY(-4px);
+      gap: 12px;
     }
   }
 }

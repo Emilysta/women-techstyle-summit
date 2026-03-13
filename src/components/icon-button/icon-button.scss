@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 15px;
+  aspect-ratio: 1 / 1;
+  transition-property: background-color, color, border-color;
+  transition-duration: var(--motion-time);
+  transition-timing-function: var(--motion-function);
+
+  i[class^='ph'] {
+    font-size: var(--md-sys-typescale-label-medium-size)
+  }
+
+  &.filled {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+
+    &:hover {
+      background-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20));
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface);
+    border: var(--border-width) solid var(--md-sys-color-outline);
+
+    &:hover {
+      border-color: var(--md-sys-color-outline-variant);
+      background-color: (from var(--md-sys-color-shadow) srgb r g b / 0.05);
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: inherit;
+
+    &:hover {
+      background-color: (from var(--md-sys-color-shadow) srgb r g b / 0.05);
+    }
+  }
+}

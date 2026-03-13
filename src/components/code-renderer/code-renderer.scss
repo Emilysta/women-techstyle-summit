@@ -1,0 +1,23 @@
+.code-container {
+  color: var(--md-sys-on-surface);
+  padding: 10px 32px 10px 10px;
+  border: var(--border-width) solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-container-low);
+  border-radius: calc(var(--border-radius) * 4);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  max-height: 400px;
+  overflow: auto;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  pre {
+    margin: 0;
+  }
+}

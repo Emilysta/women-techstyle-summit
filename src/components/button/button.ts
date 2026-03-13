@@ -14,6 +14,10 @@ export class Button {
   public readonly variant = input<ButtonVariant>('filled');
   /** Phosphor icon name (e.g. 'ph-arrow-right'). Omit for no icon. */
   public readonly icon = input<string | null>(null);
+  /** Button text */
+  public readonly text = input<string | null>(null);
   /** Icon position relative to label */
   public readonly iconPosition = input<IconPosition>('trailing');
+  /** Is shake animation enabled - only for showcase */
+  public readonly animation = input<'shake' | 'simple' | 'none'>('none');
 }

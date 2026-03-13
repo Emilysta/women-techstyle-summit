@@ -1,0 +1,58 @@
+.pictures-container {
+  margin-top: auto;
+  $offset: 12px;
+  $size: 165px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  img {
+    height: $size;
+    width: $size;
+    border-radius: calc(var(--border-radius) * 2);
+  }
+
+  img.with-dog {
+    margin-bottom: $offset;
+  }
+
+  .profile-picture-container {
+    $size: 110px;
+    $profile-picture-size: $size * 2;
+    height: $profile-picture-size;
+    width: $profile-picture-size;
+    position: relative;
+    margin: $offset;
+
+    img {
+      border-radius: calc(var(--border-radius) * 4);
+      height: $profile-picture-size;
+      width: $profile-picture-size;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      height: $profile-picture-size;
+      width: $profile-picture-size;
+      border-radius: calc(var(--border-radius) * 4);
+      border: var(--border-width) solid var(--md-sys-color-primary);
+      position: absolute;
+      z-index: 0;
+    }
+
+    &:before {
+      left: -$offset;
+      top: $offset;
+    }
+
+    &:after {
+      top: -$offset;
+      right: -$offset;
+      border-color: var(--md-sys-color-secondary);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.graph {
+  position: relative;
+  width: 250px;
+  height: 250px;
+
+  .item {
+    position: absolute;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+
+  .item-1 {
+    right: 0;
+    bottom: 70px;
+  }
+
+  .item-2 {
+    left: 0;
+    bottom: 40px;
+  }
+
+  .item-3 {
+    right: 0;
+    top: 30px;
+  }
+
+  .item-4 {
+    left: 10px;
+    top: 60px;
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--md-sys-color-secondary);
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,9 @@
+@let codeToRender = code();
+@let languageToUse = selectedFile()?.value;
+
+@if(codeToRender && languageToUse) {
+<app-code-renderer [code]="codeToRender" [language]="languageToUse"></app-code-renderer>
+}
+@if(files().length > 1) {
+<app-button-group [buttons]="files()" [(selectedButtonValue)]="selectedFile"></app-button-group>
+}

@@ -1,0 +1,23 @@
+<div [class]="brandClass()" class="brand-page-container" lang="pl-PL">
+  <div class="brand-header">
+    <img [src]="brandLogo()" />
+
+    <p>{{brandDescription()}}</p>
+  </div>
+
+  <app-card [icons]="['ph-wave-sine']" [title]="cardTitle()" [description]="cardDescription()"></app-card>
+
+  <div class="buttons">
+    <app-button icon="ph-arrow-right">Więcej o {{brandName()}}</app-button>
+    <app-button icon="ph-arrow-right" variant="outlined">Więcej o {{brandName()}}</app-button>
+  </div>
+
+  <div>
+    <h2>Produkty</h2>
+    <div class="tags">
+      @for (tag of tags(); track tag; let index = $index) {
+      <app-tag [tag]="tag" [variant]="index | tagColor"></app-tag>
+      }
+    </div>
+  </div>
+</div>
