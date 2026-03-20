@@ -1,0 +1,37 @@
+@use 'sass:map';
+@use "sass:string";
+
+@mixin apply-typography($typography-config) {
+
+  span {
+    color: red;
+  }
+
+  h1 {
+    font: string.unquote(map.get($typography-config, h1));
+  }
+
+  h2 {
+    font: string.unquote(map.get($typography-config, h2));
+  }
+
+  h3 {
+    font: string.unquote(map.get($typography-config, h3));
+  }
+
+  h4 {
+    font: string.unquote(map.get($typography-config, h4));
+  }
+
+  h5 {
+    font: string.unquote(map.get($typography-config, h5));
+  }
+
+  h6 {
+    font: string.unquote(map.get($typography-config, h6));
+  }
+
+  p {
+    font: string.unquote(map.get($typography-config, p));
+  }
+}

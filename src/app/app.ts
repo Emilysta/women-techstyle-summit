@@ -4,6 +4,7 @@ import { Button } from '../components/button/button';
 import { CompleteCodeRenderer } from '../components/complete-code-renderer/complete-code-renderer';
 import { BrandPage } from '../components/examples/brand-page/brand-page';
 import { TypographyCss } from '../components/examples/typography-css/typography-css';
+import { TypographyScss } from '../components/examples/typography-scss/typography-scss';
 import { Graph } from '../components/graph/graph';
 import { IconButton } from "../components/icon-button/icon-button";
 import { PicturesContainer } from '../components/pictures-container/pictures-container';
@@ -408,15 +409,6 @@ export class App {
     {
       component: Slide,
       inputs: {
-        title: 'Przykład systemu typografii SCSS',
-        leftSideContent: {
-
-        },
-      },
-    },
-    {
-      component: Slide,
-      inputs: {
         title: 'Przykład systemu typografii CSS',
         leftSideContent: {
           components: [{
@@ -431,26 +423,78 @@ export class App {
             inputs: {
               order: 'column-reverse',
               files: [{
-                id: 'scss',
+                id: 'css',
                 filePath: '/components/examples/typography-css/base.css',
                 value: 'scss',
                 text: 'base.css',
               },
               {
-                id: 'scss',
+                id: 'css-2',
                 filePath: '/components/examples/typography-css/modified.css',
                 value: 'scss',
                 text: 'modified.css',
               },
               {
-                id: 'html',
+                id: 'css-example-html',
                 filePath: '/components/examples/typography-css/typography-css.html',
                 value: 'html',
                 text: 'HTML',
               },
               {
-                id: 'ts',
+                id: 'css-example-ts',
                 filePath: '/components/examples/typography-css/typography-css.ts',
+                value: 'ts',
+                text: 'TS',
+              },
+              ],
+            },
+          }],
+        },
+      },
+    },
+    {
+      component: Slide,
+      inputs: {
+        title: 'Przykład systemu typografii SCSS',
+        leftSideContent: {
+          components: [{
+            component: TypographyScss,
+          }],
+        },
+        rightSideContent: {
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          components: [{
+            component: CompleteCodeRenderer,
+            inputs: {
+              order: 'column-reverse',
+              files: [{
+                id: 'scss',
+                filePath: '/components/examples/typography-scss/base.scss',
+                value: 'scss',
+                text: 'base.scss',
+              },
+              {
+                id: 'scss-2',
+                filePath: '/components/examples/typography-scss/modified.scss',
+                value: 'scss',
+                text: 'modified.scss',
+              },
+              {
+                id: 'scss-3',
+                filePath: '/components/examples/typography-scss/typography.scss',
+                value: 'scss',
+                text: 'typography.scss',
+              },
+              {
+                id: 'scss-example-html',
+                filePath: '/components/examples/typography-scss/typography-scss.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'scss-example-ts',
+                filePath: '/components/examples/typography-scss/typography-scss.ts',
                 value: 'ts',
                 text: 'TS',
               },

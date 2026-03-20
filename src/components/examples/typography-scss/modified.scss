@@ -1,0 +1,15 @@
+@use './typography.scss';
+
+$typography-config: (
+  "h1": '600 2.6em/2 "Gloria Hallelujah", cursive',
+  "h2": '600 2.4em/2 "Gloria Hallelujah", cursive',
+  "h3": '600 2.2em/2 "Gloria Hallelujah", cursive',
+  "h4": '500 2.0em/2 "Gloria Hallelujah", cursive',
+  "h5": '500 1.8em/2 "Gloria Hallelujah", cursive',
+  "h6": '500 1.6em/2 "Gloria Hallelujah", cursive',
+  "p": '400 1.2em/2 "Gloria Hallelujah", cursive',
+);
+
+.typography-modified {
+  @include typography.apply-typography($typography-config);
+}

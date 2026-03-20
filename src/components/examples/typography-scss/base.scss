@@ -1,0 +1,15 @@
+@use './typography.scss';
+
+$typography-config: (
+  "h1": '600 2.6em/2 "Roboto", sans-serif',
+  "h2": '600 2.4em/2 "Roboto", sans-serif',
+  "h3": '600 2.2em/2 "Roboto", sans-serif',
+  "h4": '500 2.0em/2 "Roboto", sans-serif',
+  "h5": '500 1.8em/2 "Roboto", sans-serif',
+  "h6": '500 1.6em/2 "Roboto", sans-serif',
+  "p": '400 1.2em/2 "Roboto", sans-serif',
+);
+
+.typography-base {
+  @include typography.apply-typography($typography-config);
+}
