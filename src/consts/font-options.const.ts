@@ -1,4 +1,4 @@
-import { Button } from "../../button-group/button-group";
+import { Button } from "../components/button-group/button-group";
 
 export const fontOptions: Button[] = [
   {

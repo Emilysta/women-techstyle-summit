@@ -1,7 +1,7 @@
 import { Component, model } from '@angular/core';
+import { fontOptions } from '../../../consts/font-options.const';
+import { fontSizeOptions } from '../../../consts/font-size-options.const';
 import { Button, ButtonGroup } from "../../button-group/button-group";
-import { fontOptions } from './font-options.const';
-import { fontSizeOptions } from './font-size-options.const';
 
 @Component({
   selector: 'app-typography-css',
