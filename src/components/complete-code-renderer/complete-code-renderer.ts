@@ -14,8 +14,12 @@ export type FileToRender = Button & {
   imports: [ButtonGroup, CodeRenderer],
   templateUrl: './complete-code-renderer.html',
   styleUrl: './complete-code-renderer.scss',
+  host: {
+    '[style.flex-direction]': 'order()'
+  }
 })
 export class CompleteCodeRenderer {
+  public order = input<'column' | 'column-reverse'>('column');
   public files = input<FileToRender[]>([]);
   public readonly selectedFile = model<FileToRender | undefined>(undefined);
   public readonly code = signal<string | undefined>(undefined);
