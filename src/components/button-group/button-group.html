@@ -1,8 +1,8 @@
 <div ngToolbar [ariaLabel]="toolbarAriaLabel()">
   <div ngToolbarWidgetGroup role="radiogroup" [ariaLabel]="groupAriaLabel()">
     @for(button of buttons(); track button.id) {
-    <button ngToolbarWidget class="md-typescale-body-medium" (click)="handleButtonChange(button)"
-      [value]="button.value">
+    <button #buttonWidget="ngToolbarWidget" ngToolbarWidget class="md-typescale-body-medium"
+      [aria-checked]="button === selectedButtonValue()" (click)="handleButtonChange(button)" [value]="button.value">
       {{ button.text }}
     </button>
     }

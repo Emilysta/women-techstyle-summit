@@ -16,6 +16,7 @@
 
 [ngToolbarWidgetGroup] {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -45,8 +46,7 @@
 }
 
 [ngToolbarWidget][aria-pressed="true"],
-[ngToolbarWidget][aria-checked="true"],
-[ngToolbarWidget][data-active="true"] {
+[ngToolbarWidget][aria-checked="true"] {
   color: color-mix(in srgb, var(--md-sys-color-on-surface) 95%, var(--accent-color));
   background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);
 }

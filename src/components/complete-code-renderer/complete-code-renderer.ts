@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, effect, inject, input, model, signal } from '@angular/core';
+import { Component, effect, inject, input, model, signal, SimpleChanges } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { Button, ButtonGroup } from "../button-group/button-group";
 import { CodeRenderer, Languages } from '../code-renderer/code-renderer';
@@ -38,6 +38,12 @@ export class CompleteCodeRenderer {
 
   ngOnInit(): void {
     this.selectedFile.set(this.files().at(0))
+  }
+
+  ngOnChanges({ files }: SimpleChanges): void {
+    if (files && !files.firstChange) {
+      this.selectedFile.set(this.files().at(0))
+    }
   }
 
   public fetchFileContent(fileUrl: string): Promise<string> {
