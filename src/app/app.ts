@@ -1,8 +1,9 @@
 import { NgComponentOutlet } from '@angular/common';
 import { Component, signal, WritableSignal } from '@angular/core';
-import { BrandPage } from '../components/brand-page/brand-page';
 import { Button } from '../components/button/button';
 import { CompleteCodeRenderer } from '../components/complete-code-renderer/complete-code-renderer';
+import { BrandPage } from '../components/examples/brand-page/brand-page';
+import { TypographyCss } from '../components/examples/typography-css/typography-css';
 import { Graph } from '../components/graph/graph';
 import { IconButton } from "../components/icon-button/icon-button";
 import { PicturesContainer } from '../components/pictures-container/pictures-container';
@@ -47,6 +48,7 @@ export class App {
             },
             { text: 'Lubię podróżować', },
             { text: 'Kocham zwierzęta', },
+            { text: 'Wolcny czas spędzam w ogrodzie', },
           ],
           listType: 'unordered',
         },
@@ -417,7 +419,44 @@ export class App {
       inputs: {
         title: 'Przykład systemu typografii CSS',
         leftSideContent: {
-
+          components: [{
+            component: TypographyCss,
+          }],
+        },
+        rightSideContent: {
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          components: [{
+            component: CompleteCodeRenderer,
+            inputs: {
+              order: 'column-reverse',
+              files: [{
+                id: 'scss',
+                filePath: '/components/examples/typography-css/base.css',
+                value: 'scss',
+                text: 'base.css',
+              },
+              {
+                id: 'scss',
+                filePath: '/components/examples/typography-css/modified.css',
+                value: 'scss',
+                text: 'modified.css',
+              },
+              {
+                id: 'html',
+                filePath: '/components/examples/typography-css/typography-css.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'ts',
+                filePath: '/components/examples/typography-css/typography-css.ts',
+                value: 'ts',
+                text: 'TS',
+              },
+              ],
+            },
+          }],
         },
       },
     },

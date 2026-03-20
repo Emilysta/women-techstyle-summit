@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
-import { TagColorPipe } from "../../pipes/tag-color-pipe";
-import { Button } from "../button/button";
-import { Card } from "../card/card";
-import { Tag } from '../tag/tag';
+import { TagColorPipe } from '../../../pipes/tag-color-pipe';
+import { Button } from '../../button/button';
+import { Card } from '../../card/card';
+import { Tag } from '../../tag/tag';
+
 
 @Component({
   selector: 'app-brand-page',
