@@ -1,0 +1,9 @@
+.typography-base {
+  --sys-typography-h1: 600 2.6em/2 "Roboto", sans-serif;
+  --sys-typography-h2: 600 2.4em/2 'Roboto', sans-serif;
+  --sys-typography-h3: 600 2.2em/2 'Roboto', sans-serif;
+  --sys-typography-h4: 500 2.0em/2 'Roboto', sans-serif;
+  --sys-typography-h5: 500 1.8em/2 'Roboto', sans-serif;
+  --sys-typography-h6: 500 1.6em/2 'Roboto', sans-serif;
+  --sys-typography-p: 400 1.2em/2 'Roboto', sans-serif;
+}

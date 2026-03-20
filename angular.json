@@ -32,6 +32,11 @@
                 "input": "src/components/button",
                 "glob": "**/*",
                 "output": "components/button"
+              },
+              {
+                "input": "src/components/examples",
+                "glob": "**/*",
+                "output": "components/examples"
               }
             ],
             "styles": [

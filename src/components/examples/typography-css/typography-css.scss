@@ -1,0 +1,59 @@
+@use './base.css';
+@use './modified.css';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .text-container {
+    border: var(--border-width) solid var(--md-sys-color-outline-variant);
+    border-radius: calc(var(--border-radius) * 4);
+    background-color: var(--md-sys-color-surface-container-low);
+    padding: 20px;
+
+
+    .italic {
+      font-style: italic;
+    }
+
+    hr {
+      color: var(--md-sys-color-outline-variant)
+    }
+
+    h1 {
+      font: var(--sys-typography-h1);
+    }
+
+    h2 {
+      font: var(--sys-typography-h2);
+    }
+
+    h3 {
+      font: var(--sys-typography-h3);
+    }
+
+    h4 {
+      font: var(--sys-typography-h4);
+    }
+
+    h5 {
+      font: var(--sys-typography-h5);
+    }
+
+    h6 {
+      font: var(--sys-typography-h6);
+    }
+
+    p {
+      font: var(--sys-typography-p);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+}
