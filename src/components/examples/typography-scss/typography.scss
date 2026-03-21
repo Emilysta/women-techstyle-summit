@@ -2,11 +2,6 @@
 @use "sass:string";
 
 @mixin apply-typography($typography-config) {
-
-  span {
-    color: red;
-  }
-
   h1 {
     font: string.unquote(map.get($typography-config, h1));
   }
