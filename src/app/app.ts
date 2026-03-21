@@ -422,6 +422,12 @@ export class App {
                 text: 'modified.scss',
               },
               {
+                id: 'colors-scss-3',
+                filePath: '/components/examples/colors-scss/colors.scss',
+                value: 'scss',
+                text: 'colors.scss',
+              },
+              {
                 id: 'colors-scss-example-html',
                 filePath: '/components/examples/colors-scss/colors-scss.html',
                 value: 'html',
