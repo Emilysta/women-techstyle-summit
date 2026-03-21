@@ -50,7 +50,7 @@ export class App {
             },
             { text: 'Lubię podróżować', },
             { text: 'Kocham zwierzęta', },
-            { text: 'Wolcny czas spędzam w ogrodzie', },
+            { text: 'Wolny czas spędzam w ogrodzie', },
           ],
           listType: 'unordered',
         },
@@ -136,7 +136,7 @@ export class App {
     {
       component: Slide,
       inputs: {
-        title: 'Mikrointerakcje i animacje - wybrór',
+        title: 'Mikrointerakcje i animacje - wybór',
         leftSideContent: {
           listTitle: 'Możliwości:',
           listPoints: [
