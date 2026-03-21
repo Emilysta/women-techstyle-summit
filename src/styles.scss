@@ -4,11 +4,11 @@
 @use './styles/theme/motion.scss';
 
 @use './styles/brand1/style.scss' as brand1-style;
-@use './styles/brand1/dark.css' as brand1-dark;
-@use './styles/brand1/light.css' as brand1-light;
+@use './styles/brand1/dark.scss' as brand1-dark;
+@use './styles/brand1/light.scss' as brand1-light;
 @use './styles/brand2/style.scss' as brand2-style;
-@use './styles/brand2/dark.css' as brand2-dark;
-@use './styles/brand2/light.css' as brand2-light;
+@use './styles/brand2/dark.scss' as brand2-dark;
+@use './styles/brand2/light.scss' as brand2-light;
 
 @use './styles/global.overrides.scss';
 
