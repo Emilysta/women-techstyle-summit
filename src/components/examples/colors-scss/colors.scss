@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use "sass:string";
+
+@mixin apply-colors($colors-config) {
+  & {
+    color: map.get($colors-config, color-on-background);
+    background-color: map.get($colors-config, color-background);
+
+    hr {
+      color: map.get($colors-config, color-outline-variant);
+    }
+  }
+
+  button {
+    &.filled {
+      background-color: map.get($colors-config, color-primary);
+      color: map.get($colors-config, color-on-primary);
+
+      &:hover {
+        background-color: hsl(from map.get($colors-config, color-primary) h s calc(l + 20));
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: map.get($colors-config, color-on-surface);
+      border: var(--border-width) solid map.get($colors-config, color-outline);
+
+      &:hover {
+        border-color: map.get($colors-config, color-outline-variant);
+        background-color: color-mix(in srgb, map.get($colors-config, color-primary) 8%, transparent);
+      }
+    }
+  }
+
+}

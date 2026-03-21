@@ -1,0 +1,16 @@
+<div class="buttons">
+  <app-button-group [buttons]="colorOptions" [(selectedButtonValue)]="currentColor"></app-button-group>
+</div>
+<div class="text-container colors-base" [class]="currentColor().value">
+  <h1>Lorem Ipsum</h1>
+  <h4 class="italic">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+  </h4>
+  <h6>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+  </h6>
+  <hr />
+
+  <div class="buttons">
+    <button class="filled">Filled button</button>
+    <button class="outlined">Outlined button</button>
+  </div>
+</div>

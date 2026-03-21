@@ -1,0 +1,15 @@
+@use './colors.scss';
+
+$colors-config: (
+  'color-background': rgb(255 248 244),
+  'color-on-background': rgb(30 27 23),
+  'color-outline': rgb(129 117 106),
+  'color-outline-variant': rgb(211 196 183),
+  'color-primary': rgb(121 88 47),
+  'color-on-primary': rgb(255 255 255),
+  'color-on-surface': rgb(30 27 23),
+);
+
+.colors-modified {
+  @include colors.apply-colors($colors-config);
+}

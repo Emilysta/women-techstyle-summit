@@ -1,39 +1,5 @@
-@use './base.css';
-@use './modified.css';
-
-:host {
-
-  .text-container {
-    color: var(--sys-color-on-background);
-    background-color: var(--sys-color-background);
-
-    hr {
-      color: var(--sys-color-outline-variant)
-    }
-  }
-
-  button {
-    &.filled {
-      background-color: var(--sys-color-primary);
-      color: var(--sys-color-on-primary);
-
-      &:hover {
-        background-color: hsl(from var(--sys-color-primary) h s calc(l + 20));
-      }
-    }
-
-    &.outlined {
-      background-color: transparent;
-      color: var(--sys-color-on-surface);
-      border: var(--border-width) solid var(--sys-color-outline);
-
-      &:hover {
-        border-color: var(--sys-color-outline-variant);
-        background-color: color-mix(in srgb, var(--sys-color-primary) 8%, transparent);
-      }
-    }
-  }
-}
+@use './base.scss';
+@use './modified.scss';
 
 :host {
   display: flex;

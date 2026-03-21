@@ -5,6 +5,7 @@ import { CompleteCodeRenderer } from '../components/complete-code-renderer/compl
 import { CostGraph } from '../components/cost-graph/cost-graph';
 import { BrandPage } from '../components/examples/brand-page/brand-page';
 import { ColorsCss } from '../components/examples/colors-css/colors-css';
+import { ColorsScss } from '../components/examples/colors-scss/colors-scss';
 import { TypographyCss } from '../components/examples/typography-css/typography-css';
 import { TypographyScss } from '../components/examples/typography-scss/typography-scss';
 import { Graph } from '../components/graph/graph';
@@ -392,12 +393,49 @@ export class App {
         },
       },
     },
-
     {
       component: Slide,
       inputs: {
         title: 'Przykład systemu kolorów w oparciu o SCSS',
         leftSideContent: {
+          components: [{
+            component: ColorsScss,
+          }],
+        },
+        rightSideContent: {
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          components: [{
+            component: CompleteCodeRenderer,
+            inputs: {
+              order: 'column-reverse',
+              files: [{
+                id: 'colors-scss',
+                filePath: '/components/examples/colors-scss/base.scss',
+                value: 'scss',
+                text: 'base.scss',
+              },
+              {
+                id: 'colors-scss-2',
+                filePath: '/components/examples/colors-scss/modified.scss',
+                value: 'scss',
+                text: 'modified.scss',
+              },
+              {
+                id: 'colors-scss-example-html',
+                filePath: '/components/examples/colors-scss/colors-scss.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'colors-scss-example-ts',
+                filePath: '/components/examples/colors-scss/colors-scss.ts',
+                value: 'ts',
+                text: 'TS',
+              },
+              ],
+            },
+          }],
         },
       },
     },
