@@ -1,6 +1,6 @@
 .pictures-container {
   margin-top: auto;
-  $offset: 14px;
+  $offset: 12px;
   $size: 165px;
   display: flex;
   gap: 20px;
@@ -23,7 +23,7 @@
     height: $profile-picture-size;
     width: $profile-picture-size;
     position: relative;
-    margin: $offset;
+    margin: $offset + 2;
 
     img {
       border-radius: calc(var(--border-radius) * 4);
