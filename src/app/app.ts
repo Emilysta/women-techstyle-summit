@@ -2,6 +2,7 @@ import { NgComponentOutlet } from '@angular/common';
 import { Component, signal, WritableSignal } from '@angular/core';
 import { Button } from '../components/button/button';
 import { CompleteCodeRenderer } from '../components/complete-code-renderer/complete-code-renderer';
+import { CostGraph } from '../components/cost-graph/cost-graph';
 import { BrandPage } from '../components/examples/brand-page/brand-page';
 import { TypographyCss } from '../components/examples/typography-css/typography-css';
 import { TypographyScss } from '../components/examples/typography-scss/typography-scss';
@@ -90,29 +91,40 @@ export class App {
       inputs: {
         title: 'Złe decyzje projektowe a koszta tych decyzji',
         leftSideContent: {
-          listTitle: 'Nieuwzględnienie takich elementów, jak:',
           listPoints: [
-            { text: 'tokenizacja czcionek', },
-            { text: 'tokenizacja kolorów', },
-            { text: 'wsparcie accessibility', },
+            {
+              text: 'Nieuwzględnienie takich elementów, jak:',
+              list: {
+                points: [
+                  { text: 'tokenizacja czcionek', },
+                  { text: 'tokenizacja kolorów', },
+                  { text: 'wsparcie accessibility', },
+                ],
+                type: 'unordered'
+              },
+            },
+            {
+              text: 'Koszta jakie ponosimy:',
+              list: {
+                points: [
+                  { text: 'Nakłady pracy', },
+                  { text: 'Pieniądze', },
+                  { text: 'Opóźnienia', },
+                ],
+                type: 'unordered'
+              },
+            }
+
           ],
           listType: 'unordered',
         },
-      }
-    },
-    {
-      component: Slide,
-      inputs: {
-        title: 'Złe decyzje projektowe a koszta tych decyzji',
-        leftSideContent: {
-          listTitle: 'Koszta jakie ponosimy:',
-          listPoints: [
-            { text: 'Nakłady pracy', },
-            { text: 'Pieniądze', },
-            { text: 'Opóźnienia', },
-          ],
-          listType: 'unordered',
-        },
+        rightSideContent: {
+          components: [
+            {
+              component: CostGraph,
+            }
+          ]
+        }
       }
     },
     {
@@ -642,25 +654,25 @@ export class App {
             component: CompleteCodeRenderer,
             inputs: {
               files: [{
-                id: 'scss',
+                id: 'brand1-light',
                 filePath: '/styles/brand1/light.scss',
                 value: 'scss',
                 text: 'brand 1 - light.scss',
               },
               {
-                id: 'scss',
+                id: 'brand1-style',
                 filePath: '/styles/brand1/style.scss',
                 value: 'scss',
                 text: 'brand 1 - style.scss',
               },
               {
-                id: 'scss',
+                id: 'brand2-light',
                 filePath: '/styles/brand2/light.scss',
                 value: 'scss',
                 text: 'brand 2 - light.scss',
               },
               {
-                id: 'scss',
+                id: 'brand2-style',
                 filePath: '/styles/brand2/style.scss',
                 value: 'scss',
                 text: 'brand 2 - style.scss',

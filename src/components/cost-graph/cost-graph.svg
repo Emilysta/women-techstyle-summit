@@ -1,0 +1,90 @@
+
+<svg
+   width="103.28509mm"
+   height="58.679356mm"
+   viewBox="0 0 103.28509 58.679356"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:currentColor;fill-rule:evenodd;stroke:currentColor;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:currentColor;fill-rule:evenodd;stroke:currentColor;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-1.7091396,-2.3507555)">
+    <g
+       id="g8"
+       transform="translate(-27.734504,-10.400439)">
+      <path
+         style="fill:none;stroke:currentColor;stroke-width:0.265;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+         d="M 34.658453,67.605377 V 13.692229"
+         id="path1" />
+      <path
+         style="fill:none;stroke:currentColor;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4)"
+         d="M 33.80269,66.749614 H 131.7877"
+         id="path2" />
+      <path
+         style="fill:none;stroke:#ea2509;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 35.029225,66.36092 C 39.24273,64.139254 46.698916,59.844784 50.792375,57.409006 61.659146,50.94283 72.02328,43.796119 81.345643,35.223831 90.012065,27.25471 96.337219,22.57517 103.72543,13.42787"
+         id="path6" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#319d00;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
+         d="m 34.64001,66.555526 c 2.994637,-1.437782 5.042708,-2.211082 7.200454,-3.697529 3.793609,-2.613375 14.746745,-9.547444 18.876859,-11.481802 4.141141,-1.939523 11.410983,-6.778134 17.125398,-9.146519 6.918491,-2.867424 11.167373,-3.835104 21.40675,-4.865171 17.225939,-1.732906 24.972269,-1.306657 32.888559,-1.362247"
+         id="path7" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;"
+         x="51.765411"
+         y="70.642273"
+         id="text7"><tspan
+           id="tspan7"
+           style="fill:currentColor;"
+           x="51.765411"
+           y="70.642273">Czas trwania projektu/wielkość kodu</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;"
+         x="-61.935772"
+         y="31.9884"
+         id="text8"
+         transform="rotate(-90)"><tspan
+           id="tspan8"
+           style="fill:currentColor"
+           x="-61.935772"
+           y="31.9884">Koszt wprowadzenia zmiany</tspan></text>
+    </g>
+  </g>
+</svg>
