@@ -4,6 +4,7 @@ import { Button } from '../components/button/button';
 import { CompleteCodeRenderer } from '../components/complete-code-renderer/complete-code-renderer';
 import { CostGraph } from '../components/cost-graph/cost-graph';
 import { BrandPage } from '../components/examples/brand-page/brand-page';
+import { ColorsCss } from '../components/examples/colors-css/colors-css';
 import { TypographyCss } from '../components/examples/typography-css/typography-css';
 import { TypographyScss } from '../components/examples/typography-scss/typography-scss';
 import { Graph } from '../components/graph/graph';
@@ -348,17 +349,55 @@ export class App {
     {
       component: Slide,
       inputs: {
-        title: 'Przykład systemu kolorów w oparciu o SCSS',
+        title: 'Przykład systemu kolorów w oparciu o CSS',
         leftSideContent: {
+          components: [{
+            component: ColorsCss,
+          }],
+        },
+        rightSideContent: {
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          components: [{
+            component: CompleteCodeRenderer,
+            inputs: {
+              order: 'column-reverse',
+              files: [{
+                id: 'colors-css',
+                filePath: '/components/examples/colors-css/base.css',
+                value: 'scss',
+                text: 'base.css',
+              },
+              {
+                id: 'colors-css-2',
+                filePath: '/components/examples/colors-css/modified.css',
+                value: 'scss',
+                text: 'modified.css',
+              },
+              {
+                id: 'colors-css-example-html',
+                filePath: '/components/examples/colors-css/colors-css.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'colors-css-example-ts',
+                filePath: '/components/examples/colors-css/colors-css.ts',
+                value: 'ts',
+                text: 'TS',
+              },
+              ],
+            },
+          }],
         },
       },
     },
+
     {
       component: Slide,
       inputs: {
-        title: 'Przykład systemu kolorów w oparciu o CSS',
+        title: 'Przykład systemu kolorów w oparciu o SCSS',
         leftSideContent: {
-
         },
       },
     },

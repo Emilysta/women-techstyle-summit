@@ -1,0 +1,8 @@
+.colors-modified {
+  --sys-color-background: rgb(255 248 244);
+  --sys-color-on-background: rgb(30 27 23);
+  --sys-color-outline: rgb(129 117 106);
+  --sys-color-outline-variant: rgb(211 196 183);
+  --sys-color-primary: rgb(121 88 47);
+  --sys-color-on-primary: rgb(255 255 255);
+}

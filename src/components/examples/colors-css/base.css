@@ -1,0 +1,8 @@
+.colors-base {
+  --sys-color-background: rgb(22 19 15);
+  --sys-color-on-background: rgb(233 225 219);
+  --sys-color-outline: rgb(155 143 130);
+  --sys-color-outline-variant: rgb(79 69 59);
+  --sys-color-primary: rgb(255 244 236);
+  --sys-color-on-primary: rgb(69 43 6);
+}
