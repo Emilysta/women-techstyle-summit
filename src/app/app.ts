@@ -12,6 +12,7 @@ import { Graph } from '../components/graph/graph';
 import { IconButton } from "../components/icon-button/icon-button";
 import { PicturesContainer } from '../components/pictures-container/pictures-container';
 import { Step, Stepper } from "../components/stepper/stepper";
+import { BrokenAxeSlide } from '../slides/broken-axe-slide/broken-axe-slide';
 import { InitialSlide } from '../slides/initial-slide/initial-slide';
 import { SectionTitle } from '../slides/section-title/section-title';
 import { Slide } from '../slides/slide/slide';
@@ -648,6 +649,17 @@ export class App {
             { text: 'Storybook Accessibility Addon' }
           ],
           listType: 'unordered',
+        },
+      },
+    },
+    {
+      component: BrokenAxeSlide,
+    },
+    {
+      component: Slide,
+      inputs: {
+        title: 'Raport Playwright AXE',
+        leftSideContent: {
         },
       },
     },
