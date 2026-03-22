@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('homepage', () => {
   test('should not have any automatically detectable accessibility issues', async ({ page }, testInfo) => {
-    await page.goto('/');
+    await page.goto('./');
 
     const accessibilityScanResults = await new AxeBuilder({ page })
       .analyze();
@@ -20,8 +20,7 @@ test.describe('homepage', () => {
 
 test.describe('accessibility-testing-broken-slide', () => {
   test('should have automatically detectable accessibility issues', async ({ page }, testInfo) => {
-    await page.goto('/accessibility-testing-broken-slide');
-    await page.waitForSelector('app-broken-axe-slide', { state: 'visible' });
+    await page.goto('./accessibility-testing-broken-slide');
 
     const accessibilityScanResults = await new AxeBuilder({ page })
       .analyze();
