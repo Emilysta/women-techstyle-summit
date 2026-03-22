@@ -251,7 +251,7 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        listTitle: ' ',
+        listTitle: 'Inny podział:',
         listPoints: [
           { text: 'marki', },
           { text: 'systemowe', },
@@ -273,7 +273,7 @@ export const slides: Step[] = [
           { text: 'rebranding aplikacji', },
           { text: '<i>Hardcoded hell</i>', },
           { text: 'wsparcie dla osób niepełnosprawnych', },
-          { text: 'możliość łatwego dostosowania styli z poziomu UI', },
+          { text: 'możliwość łatwego dostosowania styli z poziomu UI', },
         ],
         listType: 'unordered',
       },
@@ -463,7 +463,7 @@ export const slides: Step[] = [
           { text: 'rebranding aplikacji', },
           { text: '<i>Hardcoded hell</i>', },
           { text: 'wsparcie dla osób niepełnosprawnych', },
-          { text: 'możliość łatwego dostosowania czcionek z poziomu UI', },
+          { text: 'możliwość łatwego dostosowania czcionek z poziomu UI', },
         ],
         listType: 'unordered',
       },
