@@ -24,6 +24,9 @@ jobs:
         run: npm ci
       - name: Build application
         run: npm run github-build
+      - name: Copy index.html as 404.html
+        id: copy-index
+        run: cp ./dist/women-techstyle-summit/browser/index.html ./dist/women-techstyle-summit/browser/404.html
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
