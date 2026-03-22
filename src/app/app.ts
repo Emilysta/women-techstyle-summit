@@ -40,16 +40,7 @@ export class App {
         title: 'O mnie',
         leftSideContent: {
           listPoints: [
-            {
-              text: 'Software Developer',
-              list: {
-                points: [
-                  { text: 'GameDev', },
-                  { text: 'Web', },
-                ],
-                type: 'unordered'
-              }
-            },
+            { text: 'Software Developer', },
             { text: 'Lubię podróżować', },
             { text: 'Kocham zwierzęta', },
             { text: 'Wolny czas spędzam w ogrodzie', },
@@ -77,7 +68,7 @@ export class App {
             { text: 'nie tylko <i>flat screen</i> i <i>design</i>', },
             { text: 'kod, który działa "pod spodem"', },
             { text: 'sposób na interakcje z użytkownikiem', },
-            { text: 'czytelny i dostępny kontent', },
+            { text: 'czytelna i dostępna zawartość', },
             { text: 'kolory i typografia', },
           ],
           listType: 'unordered',
@@ -91,7 +82,7 @@ export class App {
     {
       component: Slide,
       inputs: {
-        title: 'Złe decyzje projektowe a koszta tych decyzji',
+        title: 'Złe decyzje projektowe a ich koszta',
         leftSideContent: {
           listPoints: [
             {
@@ -135,11 +126,52 @@ export class App {
         title: 'Mikrointerakcje i animacje'
       }
     },
+    // {
+    //   component: Slide,
+    //   inputs: {
+    //     title: 'Mikrointerakcje i animacje',
+    //     leftSideContent: {
+    //       listTitle: 'To czy użyć animacji czy też nie, zależy od:',
+    //       listPoints: [
+    //         { text: 'jaką akcje chcesz wykonać', },
+    //         { text: 'do kogo skierowany jest kontent', },
+    //         { text: 'co chcesz zaznaczyć', },
+    //       ],
+    //       listType: 'unordered',
+    //     },
+    //   }
+    // },
     {
       component: Slide,
       inputs: {
-        title: 'Mikrointerakcje i animacje - wybór',
+        title: 'Mikrointerakcje i animacje',
         leftSideContent: {
+          listPoints: [
+            {
+              text: 'When to:',
+              list: {
+                points: [
+                  { text: 'kiedy animacje podkreślają akcje użytkownika', },
+                  { text: 'kiedy są dodatkiem a nie główną częścią', },
+                ],
+                type: 'unordered',
+              }
+            },
+            {
+              text: 'When <u>not</u> to:',
+              list: {
+                points: [
+                  { text: 'kiedy animacje odrywają uwagę od kontentu', },
+                  { text: 'kiedy są oderwane od marki', },
+                  { text: 'kiedy strona przestaje być responsywna', },
+                ],
+                type: 'unordered',
+              }
+            },
+          ],
+          listType: 'unordered',
+        },
+        rightSideContent: {
           listTitle: 'Możliwości:',
           listPoints: [
             { text: 'CSS Animations', },
@@ -147,48 +179,10 @@ export class App {
             { text: 'JS Animations', },
           ],
           listType: 'unordered',
-        },
-      }
-    },
-    {
-      component: Slide,
-      inputs: {
-        title: 'Mikrointerakcje i animacje',
-        leftSideContent: {
-          listTitle: 'To czy użyć animacji czy też nie, zależy od:',
-          listPoints: [
-            { text: 'jaką akcje chcesz wykonać', },
-            { text: 'do kogo skierowany jest kontent', },
-            { text: 'co chcesz zaznaczyć', },
-          ],
-          listType: 'unordered',
-        },
-      }
-    },
-    {
-      component: Slide,
-      inputs: {
-        title: 'Mikrointerakcje i animacje',
-        leftSideContent: {
-          listTitle: 'When to:',
-          listPoints: [
-            { text: 'kiedy animacje podkreślają akcje użytkownika', },
-            { text: 'kiedy są dodatkiem a nie główną częścią', },
-          ],
-          listType: 'unordered',
-        },
-        rightSideContent: {
-          listTitle: 'When <u>not</u> to:',
-          listPoints: [
-            { text: 'kiedy animacje odrywają uwagę od kontentu', },
-            { text: 'kiedy są oderwane od marki', },
-            { text: 'kiedy strona przestaje być responsywna', },
-          ],
-          listType: 'unordered',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start'
-        },
-      }
+          alignItems: 'flex-start',
+          justifyContent: 'flex-start'
+        }
+      },
     },
     {
       component: Slide,
@@ -280,7 +274,7 @@ export class App {
             { text: 'rebranding aplikacji', },
             { text: '<i>Hardcoded hell</i>', },
             { text: 'wsparcie dla osób niepełnosprawnych', },
-            { text: 'możliość szybkiej kontroli z poziomu UI', },
+            { text: 'możliość łatwego dostosowania styli z poziomu UI', },
           ],
           listType: 'unordered',
         },
@@ -461,7 +455,7 @@ export class App {
             { text: 'rebranding aplikacji', },
             { text: '<i>Hardcoded hell</i>', },
             { text: 'wsparcie dla osób niepełnosprawnych', },
-            { text: 'możliość szybkiej kontroli z poziomu UI', },
+            { text: 'możliość łatwego dostosowania czcionek z poziomu UI', },
           ],
           listType: 'unordered',
         },
@@ -476,7 +470,7 @@ export class App {
             {
               text: 'Wybór czcionek',
               listPoints: [
-                { text: 'Ograniczenie ilości czcionek do 2-3 ', },
+                { text: 'Ograniczenie ilości czcionek do 2-3', },
                 { text: 'Weryfikacja czcionek w kontekście marki', },
                 { text: 'Weryfikacja w kontekście założonych języków' }
               ],
@@ -627,7 +621,7 @@ export class App {
         title: 'Tworzenie własnych elementów',
         leftSideContent: {
           listPoints: [
-            { text: 'Implementacja stanów, hover, pressed focused', },
+            { text: 'Implementacja stanów - hover, pressed i focused', },
             { text: 'Implementacja obsługi za pomocą klawiatury', },
             { text: 'Dodanie atrybutów ARIA', },
             { text: 'Dodanie wsparcia dla czytników ekranów' }
@@ -650,7 +644,7 @@ export class App {
           listPoints: [
             { text: 'Contrast checkers - najlepiej na poziomie projektowania', },
             { text: 'Lighthouse - performance', },
-            { text: 'Playwrigth AXE', },
+            { text: 'Playwright AXE', },
             { text: 'Storybook Accessibility Addon' }
           ],
           listType: 'unordered',
