@@ -16,9 +16,11 @@ import { Slide } from "../slides/slide/slide";
 
 export const slides: Step[] = [
   {
+    id: 'initial-slide',
     component: InitialSlide,
   },
   {
+    id: 'about-me',
     component: Slide,
     inputs: {
       title: 'O mnie',
@@ -37,12 +39,14 @@ export const slides: Step[] = [
     }
   },
   {
+    id: 'intro',
     component: SectionTitle,
     inputs: {
       title: 'Wprowadzenie'
     }
   },
   {
+    id: 'intro-ui',
     component: Slide,
     inputs: {
       title: 'User interface (UI)',
@@ -64,6 +68,7 @@ export const slides: Step[] = [
     }
   },
   {
+    id: 'project-decisions',
     component: Slide,
     inputs: {
       title: 'Złe decyzje projektowe a ich koszta',
@@ -105,6 +110,7 @@ export const slides: Step[] = [
     }
   },
   {
+    id: 'microinteractions-section',
     component: SectionTitle,
     inputs: {
       title: 'Mikrointerakcje i animacje'
@@ -126,6 +132,7 @@ export const slides: Step[] = [
   //   }
   // },
   {
+    id: 'microinteractions',
     component: Slide,
     inputs: {
       title: 'Mikrointerakcje i animacje',
@@ -169,6 +176,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'microinteractions-example',
     component: Slide,
     inputs: {
       title: 'Mikrointerakcje i animacje',
@@ -218,12 +226,14 @@ export const slides: Step[] = [
     }
   },
   {
+    id: 'colors-system-section',
     component: SectionTitle,
     inputs: {
       title: 'Systemy kolorów'
     }
   },
   {
+    id: 'colors-system-roles',
     component: Slide,
     inputs: {
       title: 'Rola kolorów',
@@ -250,6 +260,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'colors-system-importance',
     component: Slide,
     inputs: {
       title: 'Dlaczego tworzenie systemu kolorów aplikacji ma znaczenie?',
@@ -264,20 +275,21 @@ export const slides: Step[] = [
       },
     },
   },
+  // {
+  //   component: Slide,
+  //   inputs: {
+  //     title: 'Budowanie systemu kolorów',
+  //     leftSideContent: {
+  //       listPoints: [
+  //         { text: 'zaczyna się od designu', },
+  //         { text: 'dopiero potem zależy od developerów', },
+  //       ],
+  //       listType: 'unordered',
+  //     },
+  //   },
+  // },
   {
-    component: Slide,
-    inputs: {
-      title: 'Budowanie systemu kolorów',
-      leftSideContent: {
-        listPoints: [
-          { text: 'zaczyna się od designu', },
-          { text: 'dopiero potem zależy od developerów', },
-        ],
-        listType: 'unordered',
-      },
-    },
-  },
-  {
+    id: 'colors-system-design',
     component: Slide,
     inputs: {
       title: 'Budowanie systemu kolorów od strony designu',
@@ -303,6 +315,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'colors-system-code',
     component: Slide,
     inputs: {
       title: 'Budowanie systemu kolorów od strony kodu',
@@ -326,6 +339,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'colors-system-css-example',
     component: Slide,
     inputs: {
       title: 'Przykład systemu kolorów w oparciu o CSS',
@@ -372,6 +386,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'colors-system-scss-example',
     component: Slide,
     inputs: {
       title: 'Przykład systemu kolorów w oparciu o SCSS',
@@ -424,13 +439,14 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'typography-system-section',
     component: SectionTitle,
     inputs: {
       title: 'Typografia'
     }
   },
-
   {
+    id: 'typography-system-importance',
     component: Slide,
     inputs: {
       title: 'Dlaczego tworzenie systemu typografii aplikacji ma znaczenie?',
@@ -446,6 +462,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'typography-system-how-to',
     component: Slide,
     inputs: {
       title: 'Budowanie systemu typografii',
@@ -480,6 +497,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'typography-system-css-example',
     component: Slide,
     inputs: {
       title: 'Przykład systemu typografii CSS',
@@ -526,6 +544,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'typography-system-scss-example',
     component: Slide,
     inputs: {
       title: 'Przykład systemu typografii SCSS',
@@ -578,12 +597,14 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'accessibility-section',
     component: SectionTitle,
     inputs: {
       title: 'Dostepność (Accessibility)'
     }
   },
   {
+    id: 'accessibility-key-elements',
     component: Slide,
     inputs: {
       title: 'Kluczowe elementy implementacyjne',
@@ -600,6 +621,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'accessibility-custom-elements',
     component: Slide,
     inputs: {
       title: 'Tworzenie własnych elementów',
@@ -615,12 +637,14 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'accessibility-testing-section',
     component: SectionTitle,
     inputs: {
       title: 'Testing'
     }
   },
   {
+    id: 'accessibility-testing-tools',
     component: Slide,
     inputs: {
       title: 'Weryfikacja implementacji za pomocą różnych narzędzi',
@@ -636,9 +660,11 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'accessibility-testing-broken-slide',
     component: BrokenAxeSlide,
   },
   {
+    id: 'accessibility-testing-report',
     component: Slide,
     inputs: {
       title: 'Raport Playwright AXE',
@@ -647,12 +673,14 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'summary-section',
     component: SectionTitle,
     inputs: {
       title: 'Podsumowanie'
     }
   },
   {
+    id: 'summary',
     component: Slide,
     inputs: {
       title: 'Budowanie aplikacj',
@@ -684,6 +712,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'real-life-example',
     component: Slide,
     inputs: {
       title: 'Przykład real life',
@@ -718,6 +747,7 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'real-life-example-code',
     component: Slide,
     inputs: {
       title: 'Przykład real life',
@@ -757,6 +787,7 @@ export const slides: Step[] = [
     }
   },
   {
+    id: 'q-and-a',
     component: SectionTitle,
     inputs: {
       title: 'Q & A'

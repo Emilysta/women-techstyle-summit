@@ -3,6 +3,7 @@ import { IconButton } from "../icon-button/icon-button";
 
 export type ButtonVariant = 'filled' | 'outlined';
 export interface Step {
+  id: string;
   component: any;
   inputs?: Record<string, unknown>;
 }
@@ -25,7 +26,6 @@ export class Stepper {
       && this.initialStepIndex() < this.allSteps().length) {
       this.currentStepIndex.set(this.initialStepIndex());
     }
-    this.currentStep.emit(this.allSteps().at(this.currentStepIndex()))
   }
 
   public next(): void {
