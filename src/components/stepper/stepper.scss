@@ -8,6 +8,7 @@ div {
   transition-property: background-color, color, border-color;
   transition-duration: var(--motion-time);
   transition-timing-function: var(--motion-function);
+  padding: 5px;
 
   &.filled {
     background-color: var(--md-sys-color-primary);

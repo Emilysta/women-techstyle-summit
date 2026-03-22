@@ -1,4 +1,4 @@
-<button [class]="variant()" (click)="buttonClick.emit($event)" [ariaLabel]="ariaLabel()">
+<button [class]="variant()" tabindex="0" (click)="buttonClick.emit($event)" [ariaLabel]="ariaLabel()">
   @if (icon()) {
   <i class="ph" [class]="icon()" aria-hidden="true"></i>
   }
