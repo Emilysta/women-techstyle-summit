@@ -7,6 +7,7 @@ import { ColorsScss } from "../components/examples/colors-scss/colors-scss";
 import { TypographyCss } from "../components/examples/typography-css/typography-css";
 import { TypographyScss } from "../components/examples/typography-scss/typography-scss";
 import { Graph } from "../components/graph/graph";
+import { ImageRenderer } from "../components/image-renderer/image-renderer";
 import { PicturesContainer } from "../components/pictures-container/pictures-container";
 import { Step } from "../components/stepper/stepper";
 import { BrokenAxeSlide } from "../slides/broken-axe-slide/broken-axe-slide";
@@ -681,6 +682,12 @@ export const slides: Step[] = [
     inputs: {
       title: 'Raport Playwright AXE',
       leftSideContent: {
+        components: [{
+          component: ImageRenderer,
+          inputs: {
+            imageSrc: './report.png'
+          }
+        }]
       },
     },
   },
