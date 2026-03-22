@@ -4,7 +4,7 @@
   @let leftContent = leftSideContent();
 
   <div class="left-side md-typescale-body-large" [style.align-items]="leftContent?.alignItems ?? 'flex-start'"
-    [style.justify-content]="leftContent?.justifyContent ?? 'flex-start'">
+    [style.justify-content]="leftContent?.justifyContent ?? 'flex-start'" [style.min-width]="leftContent?.minWidth">
     @if(leftContent.listTitle) {
     <p [innerHTML]="leftContent.listTitle">
     </p>
@@ -23,7 +23,7 @@
   @let rightContent = rightSideContent();
   @if(rightContent) {
   <div class="right-side md-typescale-body-large" [style.align-items]="rightContent?.alignItems ?? 'center'"
-    [style.justify-content]="rightContent?.justifyContent ?? 'flex-end'">
+    [style.justify-content]="rightContent?.justifyContent ?? 'flex-end'" [style.min-width]="rightContent?.minWidth">
     @if(rightContent.listTitle) {
     <p [innerHTML]="rightContent.listTitle">
     </p>

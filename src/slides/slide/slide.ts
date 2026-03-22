@@ -13,6 +13,7 @@ export interface ContentConfig {
   listTitle?: string;
   listPoints?: ListPoint[];
   listType?: ListType;
+  minWidth?: string;
 }
 
 @Component({

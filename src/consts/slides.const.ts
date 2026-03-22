@@ -34,7 +34,8 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        components: [{ component: PicturesContainer }]
+        components: [{ component: PicturesContainer }],
+        minWidth: '450px'
       }
     }
   },
@@ -104,8 +105,10 @@ export const slides: Step[] = [
         components: [
           {
             component: CostGraph,
+
           }
-        ]
+        ],
+        minWidth: '400px'
       }
     }
   },
@@ -220,6 +223,7 @@ export const slides: Step[] = [
             }],
           },
         }],
+        minWidth: '700px',
         justifyContent: 'center',
         alignItems: 'center'
       },
@@ -347,8 +351,10 @@ export const slides: Step[] = [
         components: [{
           component: ColorsCss,
         }],
+        minWidth: '450px',
       },
       rightSideContent: {
+        minWidth: '450px',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         components: [{
@@ -391,11 +397,13 @@ export const slides: Step[] = [
     inputs: {
       title: 'Przykład systemu kolorów w oparciu o SCSS',
       leftSideContent: {
+        minWidth: '450px',
         components: [{
           component: ColorsScss,
         }],
       },
       rightSideContent: {
+        minWidth: '450px',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         components: [{
@@ -502,11 +510,13 @@ export const slides: Step[] = [
     inputs: {
       title: 'Przykład systemu typografii CSS',
       leftSideContent: {
+        minWidth: '450px',
         components: [{
           component: TypographyCss,
         }],
       },
       rightSideContent: {
+        minWidth: '450px',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         components: [{
@@ -552,8 +562,10 @@ export const slides: Step[] = [
         components: [{
           component: TypographyScss,
         }],
+        minWidth: '450px',
       },
       rightSideContent: {
+        minWidth: '450px',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         components: [{
@@ -610,7 +622,7 @@ export const slides: Step[] = [
       title: 'Kluczowe elementy implementacyjne',
       leftSideContent: {
         listPoints: [
-          { text: 'Korzystanie z <i>natywnych</i> elemnentów HTML\'owych', },
+          { text: 'Korzystanie z <i>natywnych</i> elementów HTML\'owych', },
           { text: 'Wszystkie funkcje są dostępne tylko za pomocą klawiatury', },
           { text: 'Alternatywny tekst dla zdjęć, transkrypt dla audio/wideo', },
           { text: 'Opisy dla elementów formularzowych', },
@@ -717,6 +729,7 @@ export const slides: Step[] = [
     inputs: {
       title: 'Przykład real life',
       leftSideContent: {
+        minWidth: '450px',
         components: [{
           component: BrandPage,
           inputs: {
@@ -731,6 +744,7 @@ export const slides: Step[] = [
         }],
       },
       rightSideContent: {
+        minWidth: '450px',
         components: [{
           component: BrandPage,
           inputs: {
