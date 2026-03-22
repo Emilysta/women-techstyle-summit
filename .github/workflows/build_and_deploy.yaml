@@ -28,7 +28,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/profile-page/browser/
+          path: dist/women-techstyle-summit/browser/
   deploy:
     permissions:
       pages: write
