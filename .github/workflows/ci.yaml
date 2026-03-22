@@ -1,0 +1,16 @@
+name: Build and deploy application, run tests
+
+env:
+  nodeJsVersion: 24.10.0
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build_and_deploy:
+    uses: ./.github/workflows/build_and_deploy.yaml
+  playwright:
+    uses: ./.github/workflows/playwright.yaml
+    needs: build_and_deploy
+    with:
+      pageUrl: ${{ needs.build_and_deploy.outputs.pageUrl }}
