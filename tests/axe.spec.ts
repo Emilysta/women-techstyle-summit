@@ -21,6 +21,7 @@ test.describe('homepage', () => {
 test.describe('accessibility-testing-broken-slide', () => {
   test('should have automatically detectable accessibility issues', async ({ page }, testInfo) => {
     await page.goto('/accessibility-testing-broken-slide');
+    await page.waitForSelector('app-broken-axe-slide', { state: 'visible' });
 
     const accessibilityScanResults = await new AxeBuilder({ page })
       .analyze();
