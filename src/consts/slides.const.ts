@@ -868,7 +868,6 @@ export const slides: Step[] = [
             }],
           },
         }],
-        justifyContent: 'center',
         alignItems: 'center'
       },
     }
