@@ -318,8 +318,9 @@ export const slides: Step[] = [
     id: 'colors-system-design',
     component: Slide,
     inputs: {
-      title: 'Budowanie systemu kolorów od strony designu',
+      title: 'Budowanie systemu kolorów',
       leftSideContent: {
+        listTitle: 'Od strony designu:',
         listPoints: [
           { text: 'Hierarchia kolorów - Zasada 60-30-10', },
           { text: 'Tokenizacja', },
@@ -338,21 +339,15 @@ export const slides: Step[] = [
         ],
         listType: 'unordered',
       },
-    },
-  },
-  {
-    id: 'colors-system-code',
-    component: Slide,
-    inputs: {
-      title: 'Budowanie systemu kolorów od strony kodu',
-      leftSideContent: {
+      rightSideContent: {
+        listTitle: 'Od strony kodu:',
         listPoints: [
           {
             text: 'Tokenizacja kolorów',
             list: {
               points: [
                 { text: 'Zmienne CSS', },
-                { text: 'Zmienie SCSS', },
+                { text: 'Zmienne SCSS', },
               ],
               type: 'unordered'
             }
@@ -361,6 +356,8 @@ export const slides: Step[] = [
           { text: 'Często, upilnowanie designerów i ograniczanie ilości kolorów' }
         ],
         listType: 'unordered',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
       },
     },
   },
