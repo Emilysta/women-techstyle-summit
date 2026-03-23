@@ -702,7 +702,7 @@ export const slides: Step[] = [
     id: 'summary',
     component: Slide,
     inputs: {
-      title: 'Budowanie aplikacj',
+      title: 'Budowanie aplikacji',
       leftSideContent: {
         listPoints: [
           {
