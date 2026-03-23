@@ -510,26 +510,37 @@ export const slides: Step[] = [
         listPoints: [
           {
             text: 'Wybór czcionek',
-            listPoints: [
-              { text: 'Ograniczenie ilości czcionek do 2-3', },
-              { text: 'Weryfikacja czcionek w kontekście marki', },
-              { text: 'Weryfikacja w kontekście założonych języków' }
-            ],
+            list: {
+              points: [
+                { text: 'Ograniczenie ilości czcionek do 2-3', },
+                { text: 'Weryfikacja czcionek w kontekście marki', },
+                { text: 'Weryfikacja w kontekście założonych języków' }
+              ],
+              type: 'unordered',
+            },
+
           },
           {
             text: 'Dobór rozmiaru',
-            listPoints: [
-              { text: 'Font weight', },
-              { text: 'Line height', },
-              { text: 'Font size' }
-            ],
+            list: {
+              points: [
+                { text: 'Font weight', },
+                { text: 'Line height', },
+                { text: 'Font size' }
+              ],
+              type: 'unordered',
+            },
           },
           {
             text: 'Performance',
-            listPoints: [
-              { text: 'Dynamiczne skalowanie rozmiaru', },
-              { text: 'Ładowanie czcionek', },
-            ],
+            list: {
+              points: [
+                { text: 'Dynamiczne skalowanie rozmiaru', },
+                { text: 'Ładowanie czcionek', },
+              ],
+              type: 'unordered',
+            }
+
           }
         ],
         listType: 'unordered',
