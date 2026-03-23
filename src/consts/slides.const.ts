@@ -706,7 +706,7 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           {
-            text: 'Budowanie themingu od początku tworzenia aplikacji',
+            text: 'Budowanie design systemu od początku tworzenia aplikacji',
             list: {
               points: [
                 { text: 'Od klienta', },
@@ -776,6 +776,7 @@ export const slides: Step[] = [
         components: [{
           component: CompleteCodeRenderer,
           inputs: {
+            order: 'column-reverse',
             files: [{
               id: 'brand1-light',
               filePath: './styles/brand1/light.scss',
