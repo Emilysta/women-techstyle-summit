@@ -1,7 +1,7 @@
 <div class="graph">
-  <div class="center md-typescale-body-large">UI</div>
-  <div class="item item-1">Motion</div>
-  <div class="item item-2">Typography</div>
-  <div class="item item-3">Accessibility</div>
-  <div class="item item-4">Colors</div>
+  @if(centeredText()){<div class="center md-typescale-body-large">{{centeredText()}}</div>}
+  @if(text1()){<div class="item item-1">{{text1()}}</div>}
+  @if(text2()){<div class="item item-2">{{text2()}}</div>}
+  @if(text3()){<div class="item item-3">{{text3()}}</div>}
+  @if(text4()){<div class="item item-4">{{text4()}}</div>}
 </div>

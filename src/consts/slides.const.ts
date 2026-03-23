@@ -64,7 +64,16 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        components: [{ component: Graph }],
+        components: [{
+          component: Graph,
+          inputs: {
+            centeredText: 'UI',
+            text1: 'Motion',
+            text2: 'Typography',
+            text3: 'Accessibility',
+            text4: 'Colors'
+          }
+        }],
         justifyContent: 'center',
       }
     }
@@ -278,6 +287,18 @@ export const slides: Step[] = [
         ],
         listType: 'unordered',
       },
+      rightSideContent: {
+        components: [{
+          component: Graph,
+          inputs: {
+            centeredText: 'Color',
+            text4: 'rgb(25,25,25)',
+            text2: '#191919',
+            text1: 'black',
+          }
+        }],
+        justifyContent: 'center',
+      }
     },
   },
   // {
