@@ -673,6 +673,10 @@ export const slides: Step[] = [
         ],
         listType: 'unordered',
       },
+      rightSideContent: {
+        justifyContent: 'center',
+        listTitle: '<div class="text-centered"><h1 class="md-typescale-display-small text-primary">WCAG</h1> <span class="md-typescale-headline-small text-centered">Web Content Accessibility Guidelines</span></div>'
+      }
     },
   },
   {

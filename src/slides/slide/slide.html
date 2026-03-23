@@ -25,8 +25,8 @@
   <div class="right-side md-typescale-body-large" [style.align-items]="rightContent?.alignItems ?? 'center'"
     [style.justify-content]="rightContent?.justifyContent ?? 'flex-end'" [style.min-width]="rightContent?.minWidth">
     @if(rightContent.listTitle) {
-    <p [innerHTML]="rightContent.listTitle">
-    </p>
+    <div [innerHTML]="rightContent.listTitle">
+    </div>
     }
 
     @let rightPoints = rightContent.listPoints;
