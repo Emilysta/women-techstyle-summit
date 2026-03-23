@@ -752,7 +752,7 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           {
-            text: 'Budowanie design systemu od początku tworzenia aplikacji',
+            text: 'Tworzenie systemu kolorów, typografii od początku tworzenia aplikacji',
             list: {
               points: [
                 { text: 'Od klienta', },
