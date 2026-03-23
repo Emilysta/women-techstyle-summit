@@ -35,7 +35,15 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        components: [{ component: PicturesContainer }],
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        components: [{
+          component: PicturesContainer,
+          inputs: {
+            mainPictureLink: './profile.jpg',
+            leftPictureLink: './with_dog.webp'
+          }
+        }],
         minWidth: '450px'
       }
     }
@@ -710,12 +718,23 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           { text: 'Contrast checkers - najlepiej na poziomie projektowania', },
-          { text: 'Lighthouse - performance', },
+          { text: 'Lighthouse w Chrome, Audit w Safari', },
           { text: 'Playwright AXE', },
           { text: 'Storybook Accessibility Addon' }
         ],
         listType: 'unordered',
       },
+      rightSideContent: {
+        components: [{
+          component: PicturesContainer,
+          inputs: {
+            mainPictureLink: './lighthouse.png',
+            leftPictureLink: './storybook.svg',
+            topPictureLink: './playwright.svg'
+          }
+        }],
+        minWidth: '450px'
+      }
     },
   },
   {

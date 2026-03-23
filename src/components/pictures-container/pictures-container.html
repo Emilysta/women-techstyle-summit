@@ -1,7 +1,10 @@
-<div class="pictures-container">
-  <img class="with-dog" src="./with_dog.webp" alt="Picture of me with one of my dogs" />
+@if(topPictureLink()) {<img class="top" [src]="topPictureLink()" alt="Picture of me with one of my dogs" />}
 
-  <div class="profile-picture-container">
-    <img src="./profile.jpg" alt="Profile picture" />
+<div class="bottom-pictures-container">
+  @if(leftPictureLink()) {<img class="left" [src]="leftPictureLink()" alt="Picture of me with one of my dogs" />}
+
+  <div class="main-picture-container">
+    <img [src]="mainPictureLink()" alt="Profile picture" />
   </div>
+  <!-- TODO alt options -->
 </div>

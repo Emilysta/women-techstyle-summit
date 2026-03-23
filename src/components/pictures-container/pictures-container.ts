@@ -8,6 +8,6 @@ import { Component, input } from '@angular/core';
 })
 export class PicturesContainer {
   public readonly mainPictureLink = input.required<string>();
-  public readonly leftPIctureLink = input<string | undefined>(undefined);
-  public readonly topPIctureLink = input<string | undefined>(undefined);
+  public readonly leftPictureLink = input<string | undefined>(undefined);
+  public readonly topPictureLink = input<string | undefined>(undefined);
 }

@@ -1,11 +1,9 @@
-.pictures-container {
-  margin-top: auto;
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   $offset: 12px;
   $size: 165px;
-  display: flex;
-  gap: 20px;
-  align-items: flex-end;
-  justify-content: flex-end;
 
   img {
     height: $size;
@@ -13,46 +11,54 @@
     border-radius: calc(var(--border-radius) * 2);
   }
 
-  img.with-dog {
-    margin-bottom: $offset;
-  }
+  .bottom-pictures-container {
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
 
-  .profile-picture-container {
-    $size: 110px;
-    $profile-picture-size: $size * 2;
-    height: $profile-picture-size;
-    width: $profile-picture-size;
-    position: relative;
-    margin: $offset + 2;
-
-    img {
-      border-radius: calc(var(--border-radius) * 4);
-      height: $profile-picture-size;
-      width: $profile-picture-size;
-      position: absolute;
-      z-index: 1;
+    img.left {
+      margin-bottom: $offset;
     }
 
-    &:before,
-    &:after {
-      content: "";
-      height: $profile-picture-size;
-      width: $profile-picture-size;
-      border-radius: calc(var(--border-radius) * 4);
-      border: var(--border-width) solid var(--md-sys-color-primary);
-      position: absolute;
-      z-index: 0;
-    }
+    .main-picture-container {
+      $size: 110px;
+      $main-picture-size: $size * 2;
+      height: $main-picture-size;
+      width: $main-picture-size;
+      position: relative;
+      margin: $offset + 2;
 
-    &:before {
-      left: -$offset;
-      top: $offset;
-    }
+      img {
+        border-radius: calc(var(--border-radius) * 4);
+        height: $main-picture-size;
+        width: $main-picture-size;
+        position: absolute;
+        z-index: 1;
+      }
 
-    &:after {
-      top: -$offset;
-      right: -$offset;
-      border-color: var(--md-sys-color-secondary);
+      &:before,
+      &:after {
+        content: "";
+        height: $main-picture-size;
+        width: $main-picture-size;
+        border-radius: calc(var(--border-radius) * 4);
+        border: var(--border-width) solid var(--md-sys-color-primary);
+        position: absolute;
+        z-index: 0;
+      }
+
+      &:before {
+        left: -$offset;
+        top: $offset;
+      }
+
+      &:after {
+        top: -$offset;
+        right: -$offset;
+        border-color: var(--md-sys-color-secondary);
+      }
     }
   }
 }
