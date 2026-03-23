@@ -486,6 +486,19 @@ export const slides: Step[] = [
         ],
         listType: 'unordered',
       },
+      rightSideContent: {
+        components: [{
+          component: Graph,
+          inputs: {
+            centeredText: 'Font',
+            text4: 'font-size',
+            text2: 'font-weight',
+            text1: 'font-family',
+            text3: 'line-height'
+          }
+        }],
+        justifyContent: 'center',
+      }
     },
   },
   {
