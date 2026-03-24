@@ -1,41 +1,44 @@
-<h1 class="md-typescale-display-medium" [innerHTML]="title()"></h1>
+@if (title()) {
+  <h1 class="md-typescale-display-medium" [innerHTML]="title()"></h1>
+}
 
 <div class="content">
   @let leftContent = leftSideContent();
 
   <div class="left-side md-typescale-body-large" [style.align-items]="leftContent?.alignItems ?? 'flex-start'"
-    [style.justify-content]="leftContent?.justifyContent ?? 'flex-start'" [style.min-width]="leftContent?.minWidth">
-    @if(leftContent.listTitle) {
-    <p [innerHTML]="leftContent.listTitle">
-    </p>
+       [style.justify-content]="leftContent?.justifyContent ?? 'flex-start'" [style.min-width]="leftContent?.minWidth">
+    @if (leftContent.listTitle) {
+      <p [innerHTML]="leftContent.listTitle">
+      </p>
     }
 
     @let leftListPoints = leftContent.listPoints;
-    @if(leftListPoints) {
-    <app-list [listType]="leftContent.listType ?? 'unordered'" [listPoints]="leftListPoints"></app-list>
+    @if (leftListPoints) {
+      <app-list [listType]="leftContent.listType ?? 'unordered'" [listPoints]="leftListPoints"></app-list>
     }
 
-    @for(componentConfig of leftContent.components; track $index) {
-    <ng-container *ngComponentOutlet="componentConfig.component; inputs: componentConfig.inputs;" />
+    @for (componentConfig of leftContent.components; track $index) {
+      <ng-container *ngComponentOutlet="componentConfig.component; inputs: componentConfig.inputs;" />
     }
   </div>
 
   @let rightContent = rightSideContent();
-  @if(rightContent) {
-  <div class="right-side md-typescale-body-large" [style.align-items]="rightContent?.alignItems ?? 'center'"
-    [style.justify-content]="rightContent?.justifyContent ?? 'flex-end'" [style.min-width]="rightContent?.minWidth">
-    @if(rightContent.listTitle) {
-    <div [innerHTML]="rightContent.listTitle">
-    </div>
-    }
+  @if (rightContent) {
+    <div class="right-side md-typescale-body-large" [style.align-items]="rightContent?.alignItems ?? 'center'"
+         [style.justify-content]="rightContent?.justifyContent ?? 'flex-end'"
+         [style.min-width]="rightContent?.minWidth">
+      @if (rightContent.listTitle) {
+        <div [innerHTML]="rightContent.listTitle">
+        </div>
+      }
 
-    @let rightPoints = rightContent.listPoints;
-    @if(rightPoints) {
-    <app-list [listType]="rightContent?.listType ?? 'unordered'" [listPoints]="rightPoints"></app-list>
-    }
-    @for(componentConfig of rightContent.components; track $index) {
-    <ng-container *ngComponentOutlet="componentConfig.component; inputs: componentConfig.inputs;" />
-    }
-  </div>
+      @let rightPoints = rightContent.listPoints;
+      @if (rightPoints) {
+        <app-list [listType]="rightContent?.listType ?? 'unordered'" [listPoints]="rightPoints"></app-list>
+      }
+      @for (componentConfig of rightContent.components; track $index) {
+        <ng-container *ngComponentOutlet="componentConfig.component; inputs: componentConfig.inputs;" />
+      }
+    </div>
   }
 </div>

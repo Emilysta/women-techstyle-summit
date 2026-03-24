@@ -17,6 +17,21 @@ import { Slide } from "../slides/slide/slide";
 
 export const slides: Step[] = [
   {
+    id: 'start',
+    component: Slide,
+    inputs: {
+      leftSideContent: {
+        alignItems: 'center',
+        components: [{
+          component: ImageRenderer,
+          inputs: {
+            imageSrc: './start_slide.png',
+          }
+        }],
+      },
+    },
+  },
+  {
     id: 'initial-slide',
     component: InitialSlide,
   },

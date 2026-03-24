@@ -1,5 +1,5 @@
 import { NgComponentOutlet } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { List, ListPoint, ListType } from '../../components/list/list';
 
 export interface ComponentConfig {
@@ -26,7 +26,7 @@ export interface ContentConfig {
   styleUrl: './slide.scss',
 })
 export class Slide {
-  public readonly title = input.required<string>();
-  public readonly leftSideContent = input.required<ContentConfig>();
-  public readonly rightSideContent = input<ContentConfig | undefined>(undefined);
+  public readonly title: InputSignal<string | undefined> = input<string | undefined>(undefined);
+  public readonly leftSideContent: InputSignal<ContentConfig> = input.required<ContentConfig>();
+  public readonly rightSideContent: InputSignal<ContentConfig | undefined> = input<ContentConfig | undefined>(undefined);
 }
