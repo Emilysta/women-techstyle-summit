@@ -257,7 +257,7 @@ export const slides: Step[] = [
             }],
           },
         }],
-        minWidth: '700px',
+        minWidth: '350px',
         justifyContent: 'center',
         alignItems: 'center',
       },
@@ -268,6 +268,34 @@ export const slides: Step[] = [
     component: SectionTitle,
     inputs: {
       title: 'Systemy kolorów',
+    },
+  },
+  {
+    id: 'colors-system-importance',
+    component: Slide,
+    inputs: {
+      title: 'Dlaczego tworzenie systemu kolorów aplikacji ma znaczenie?',
+      leftSideContent: {
+        listPoints: [
+          { text: '<i>Hardcoded hell</i>' },
+          { text: 'rebranding aplikacji' },
+          { text: 'wsparcie dla osób niepełnosprawnych' },
+          { text: 'możliwość łatwego dostosowania styli z poziomu UI' },
+        ],
+        listType: 'unordered',
+      },
+      rightSideContent: {
+        components: [{
+          component: Graph,
+          inputs: {
+            centeredText: 'Color',
+            text4: 'rgb(25,25,25)',
+            text2: '#191919',
+            text1: 'black',
+          },
+        }],
+        justifyContent: 'center',
+      },
     },
   },
   {
@@ -297,34 +325,7 @@ export const slides: Step[] = [
       },
     },
   },
-  {
-    id: 'colors-system-importance',
-    component: Slide,
-    inputs: {
-      title: 'Dlaczego tworzenie systemu kolorów aplikacji ma znaczenie?',
-      leftSideContent: {
-        listPoints: [
-          { text: 'rebranding aplikacji' },
-          { text: '<i>Hardcoded hell</i>' },
-          { text: 'wsparcie dla osób niepełnosprawnych' },
-          { text: 'możliwość łatwego dostosowania styli z poziomu UI' },
-        ],
-        listType: 'unordered',
-      },
-      rightSideContent: {
-        components: [{
-          component: Graph,
-          inputs: {
-            centeredText: 'Color',
-            text4: 'rgb(25,25,25)',
-            text2: '#191919',
-            text1: 'black',
-          },
-        }],
-        justifyContent: 'center',
-      },
-    },
-  },
+
   // {
   //   component: Slide,
   //   inputs: {
@@ -367,7 +368,7 @@ export const slides: Step[] = [
         listTitle: 'Od strony kodu:',
         listPoints: [
           {
-            text: 'Tokenizacja kolorów',
+            text: 'Tokenizacja kolorów i kształtów',
             list: {
               points: [
                 { text: 'Zmienne CSS' },
@@ -376,8 +377,7 @@ export const slides: Step[] = [
               type: 'unordered',
             },
           },
-          { text: 'Utrzymanie kolorów na poziomie roli, a nie akcji' },
-          { text: 'Często, upilnowanie designerów i ograniczanie ilości kolorów' },
+          { text: 'Utrzymanie kolorów z jednego źródła' },
         ],
         listType: 'unordered',
         justifyContent: 'flex-start',
@@ -410,24 +410,24 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.css',
             },
-              {
-                id: 'colors-css-2',
-                filePath: './components/examples/colors-css/modified.css',
-                value: 'scss',
-                text: 'modified.css',
-              },
-              {
-                id: 'colors-css-example-html',
-                filePath: './components/examples/colors-css/colors-css.html',
-                value: 'html',
-                text: 'HTML',
-              },
-              {
-                id: 'colors-css-example-ts',
-                filePath: './components/examples/colors-css/colors-css.ts',
-                value: 'ts',
-                text: 'TS',
-              },
+            {
+              id: 'colors-css-2',
+              filePath: './components/examples/colors-css/modified.css',
+              value: 'scss',
+              text: 'modified.css',
+            },
+            {
+              id: 'colors-css-example-html',
+              filePath: './components/examples/colors-css/colors-css.html',
+              value: 'html',
+              text: 'HTML',
+            },
+            {
+              id: 'colors-css-example-ts',
+              filePath: './components/examples/colors-css/colors-css.ts',
+              value: 'ts',
+              text: 'TS',
+            },
             ],
           },
         }],
@@ -459,30 +459,30 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.scss',
             },
-              {
-                id: 'colors-scss-2',
-                filePath: './components/examples/colors-scss/modified.scss',
-                value: 'scss',
-                text: 'modified.scss',
-              },
-              {
-                id: 'colors-scss-3',
-                filePath: './components/examples/colors-scss/colors.scss',
-                value: 'scss',
-                text: 'colors.scss',
-              },
-              {
-                id: 'colors-scss-example-html',
-                filePath: './components/examples/colors-scss/colors-scss.html',
-                value: 'html',
-                text: 'HTML',
-              },
-              {
-                id: 'colors-scss-example-ts',
-                filePath: './components/examples/colors-scss/colors-scss.ts',
-                value: 'ts',
-                text: 'TS',
-              },
+            {
+              id: 'colors-scss-2',
+              filePath: './components/examples/colors-scss/modified.scss',
+              value: 'scss',
+              text: 'modified.scss',
+            },
+            {
+              id: 'colors-scss-3',
+              filePath: './components/examples/colors-scss/colors.scss',
+              value: 'scss',
+              text: 'colors.scss',
+            },
+            {
+              id: 'colors-scss-example-html',
+              filePath: './components/examples/colors-scss/colors-scss.html',
+              value: 'html',
+              text: 'HTML',
+            },
+            {
+              id: 'colors-scss-example-ts',
+              filePath: './components/examples/colors-scss/colors-scss.ts',
+              value: 'ts',
+              text: 'TS',
+            },
             ],
           },
         }],
@@ -596,24 +596,24 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.css',
             },
-              {
-                id: 'css-2',
-                filePath: './components/examples/typography-css/modified.css',
-                value: 'scss',
-                text: 'modified.css',
-              },
-              {
-                id: 'css-example-html',
-                filePath: './components/examples/typography-css/typography-css.html',
-                value: 'html',
-                text: 'HTML',
-              },
-              {
-                id: 'css-example-ts',
-                filePath: './components/examples/typography-css/typography-css.ts',
-                value: 'ts',
-                text: 'TS',
-              },
+            {
+              id: 'css-2',
+              filePath: './components/examples/typography-css/modified.css',
+              value: 'scss',
+              text: 'modified.css',
+            },
+            {
+              id: 'css-example-html',
+              filePath: './components/examples/typography-css/typography-css.html',
+              value: 'html',
+              text: 'HTML',
+            },
+            {
+              id: 'css-example-ts',
+              filePath: './components/examples/typography-css/typography-css.ts',
+              value: 'ts',
+              text: 'TS',
+            },
             ],
           },
         }],
@@ -645,30 +645,30 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.scss',
             },
-              {
-                id: 'scss-2',
-                filePath: './components/examples/typography-scss/modified.scss',
-                value: 'scss',
-                text: 'modified.scss',
-              },
-              {
-                id: 'scss-3',
-                filePath: './components/examples/typography-scss/typography.scss',
-                value: 'scss',
-                text: 'typography.scss',
-              },
-              {
-                id: 'scss-example-html',
-                filePath: './components/examples/typography-scss/typography-scss.html',
-                value: 'html',
-                text: 'HTML',
-              },
-              {
-                id: 'scss-example-ts',
-                filePath: './components/examples/typography-scss/typography-scss.ts',
-                value: 'ts',
-                text: 'TS',
-              },
+            {
+              id: 'scss-2',
+              filePath: './components/examples/typography-scss/modified.scss',
+              value: 'scss',
+              text: 'modified.scss',
+            },
+            {
+              id: 'scss-3',
+              filePath: './components/examples/typography-scss/typography.scss',
+              value: 'scss',
+              text: 'typography.scss',
+            },
+            {
+              id: 'scss-example-html',
+              filePath: './components/examples/typography-scss/typography-scss.html',
+              value: 'html',
+              text: 'HTML',
+            },
+            {
+              id: 'scss-example-ts',
+              filePath: './components/examples/typography-scss/typography-scss.ts',
+              value: 'ts',
+              text: 'TS',
+            },
             ],
           },
         }],
@@ -865,24 +865,24 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'brand 1 - light.scss',
             },
-              {
-                id: 'brand1-style',
-                filePath: './styles/brand1/style.scss',
-                value: 'scss',
-                text: 'brand 1 - style.scss',
-              },
-              {
-                id: 'brand2-light',
-                filePath: './styles/brand2/light.scss',
-                value: 'scss',
-                text: 'brand 2 - light.scss',
-              },
-              {
-                id: 'brand2-style',
-                filePath: './styles/brand2/style.scss',
-                value: 'scss',
-                text: 'brand 2 - style.scss',
-              }],
+            {
+              id: 'brand1-style',
+              filePath: './styles/brand1/style.scss',
+              value: 'scss',
+              text: 'brand 1 - style.scss',
+            },
+            {
+              id: 'brand2-light',
+              filePath: './styles/brand2/light.scss',
+              value: 'scss',
+              text: 'brand 2 - light.scss',
+            },
+            {
+              id: 'brand2-style',
+              filePath: './styles/brand2/style.scss',
+              value: 'scss',
+              text: 'brand 2 - style.scss',
+            }],
           },
         }],
         alignItems: 'center',
