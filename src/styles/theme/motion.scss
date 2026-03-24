@@ -2,3 +2,10 @@
   --motion-time: 0.3s;
   --motion-function: ease;
 }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .motion {
+    --motion-time: 0;
+  }
+}

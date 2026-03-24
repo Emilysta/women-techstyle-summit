@@ -10,9 +10,16 @@
     border: var(--border-width) solid var(--md-sys-color-outline-variant);
     border-radius: calc(var(--border-radius) * 4);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
     .italic {
       font-style: italic;
+    }
+
+    hr {
+      margin: 0;
     }
   }
 
