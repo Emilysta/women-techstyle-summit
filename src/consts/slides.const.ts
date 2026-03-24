@@ -1,19 +1,19 @@
-import { Button } from "../components/button/button";
-import { CompleteCodeRenderer } from "../components/complete-code-renderer/complete-code-renderer";
-import { CostGraph } from "../components/cost-graph/cost-graph";
-import { BrandPage } from "../components/examples/brand-page/brand-page";
-import { ColorsCss } from "../components/examples/colors-css/colors-css";
-import { ColorsScss } from "../components/examples/colors-scss/colors-scss";
-import { TypographyCss } from "../components/examples/typography-css/typography-css";
-import { TypographyScss } from "../components/examples/typography-scss/typography-scss";
-import { Graph } from "../components/graph/graph";
-import { ImageRenderer } from "../components/image-renderer/image-renderer";
-import { PicturesContainer } from "../components/pictures-container/pictures-container";
-import { Step } from "../components/stepper/stepper";
-import { BrokenAxeSlide } from "../slides/broken-axe-slide/broken-axe-slide";
-import { InitialSlide } from "../slides/initial-slide/initial-slide";
-import { SectionTitle } from "../slides/section-title/section-title";
-import { Slide } from "../slides/slide/slide";
+import { Button } from '../components/button/button';
+import { CompleteCodeRenderer } from '../components/complete-code-renderer/complete-code-renderer';
+import { CostGraph } from '../components/cost-graph/cost-graph';
+import { BrandPage } from '../components/examples/brand-page/brand-page';
+import { ColorsCss } from '../components/examples/colors-css/colors-css';
+import { ColorsScss } from '../components/examples/colors-scss/colors-scss';
+import { TypographyCss } from '../components/examples/typography-css/typography-css';
+import { TypographyScss } from '../components/examples/typography-scss/typography-scss';
+import { Graph } from '../components/graph/graph';
+import { ImageRenderer } from '../components/image-renderer/image-renderer';
+import { PicturesContainer } from '../components/pictures-container/pictures-container';
+import { Step } from '../components/stepper/stepper';
+import { BrokenAxeSlide } from '../slides/broken-axe-slide/broken-axe-slide';
+import { InitialSlide } from '../slides/initial-slide/initial-slide';
+import { SectionTitle } from '../slides/section-title/section-title';
+import { Slide } from '../slides/slide/slide';
 
 export const slides: Step[] = [
   {
@@ -26,7 +26,8 @@ export const slides: Step[] = [
           component: ImageRenderer,
           inputs: {
             imageSrc: './start_slide.png',
-          }
+            imageAlt: 'Start slide with title, date, author and sponsors',
+          },
         }],
       },
     },
@@ -42,10 +43,10 @@ export const slides: Step[] = [
       title: 'O mnie',
       leftSideContent: {
         listPoints: [
-          { text: 'Software Developer', },
-          { text: 'Lubię podróżować', },
-          { text: 'Kocham zwierzęta', },
-          { text: 'Wolny czas spędzam w ogrodzie', },
+          { text: 'Software Developer' },
+          { text: 'Lubię podróżować' },
+          { text: 'Kocham zwierzęta' },
+          { text: 'Wolny czas spędzam w ogrodzie' },
         ],
         listType: 'unordered',
       },
@@ -56,19 +57,19 @@ export const slides: Step[] = [
           component: PicturesContainer,
           inputs: {
             mainPictureLink: './profile.jpg',
-            leftPictureLink: './with_dog.webp'
-          }
+            leftPictureLink: './with_dog.webp',
+          },
         }],
-        minWidth: '450px'
-      }
-    }
+        minWidth: '450px',
+      },
+    },
   },
   {
     id: 'intro',
     component: SectionTitle,
     inputs: {
-      title: 'Wprowadzenie'
-    }
+      title: 'Wprowadzenie',
+    },
   },
   {
     id: 'intro-ui',
@@ -78,11 +79,11 @@ export const slides: Step[] = [
       leftSideContent: {
         listTitle: 'Interfejs użytkownika to:',
         listPoints: [
-          { text: 'nie tylko <i>flat screen</i> i <i>design</i>', },
-          { text: 'kod, który działa "pod spodem"', },
-          { text: 'sposób na interakcje z użytkownikiem', },
-          { text: 'czytelna i dostępna zawartość', },
-          { text: 'kolory i typografia', },
+          { text: 'nie tylko <i>flat screen</i> i <i>design</i>' },
+          { text: 'kod, który działa "pod spodem"' },
+          { text: 'sposób na interakcje z użytkownikiem' },
+          { text: 'czytelna i dostępna zawartość' },
+          { text: 'kolory i typografia' },
         ],
         listType: 'unordered',
       },
@@ -94,12 +95,12 @@ export const slides: Step[] = [
             text1: 'Motion',
             text2: 'Typography',
             text3: 'Accessibility',
-            text4: 'Colors'
-          }
+            text4: 'Colors',
+          },
         }],
         justifyContent: 'center',
-      }
-    }
+      },
+    },
   },
   {
     id: 'project-decisions',
@@ -112,24 +113,24 @@ export const slides: Step[] = [
             text: 'Nieuwzględnienie takich elementów, jak:',
             list: {
               points: [
-                { text: 'tokenizacja czcionek', },
-                { text: 'tokenizacja kolorów', },
-                { text: 'wsparcie accessibility', },
+                { text: 'tokenizacja czcionek' },
+                { text: 'tokenizacja kolorów' },
+                { text: 'wsparcie accessibility' },
               ],
-              type: 'unordered'
+              type: 'unordered',
             },
           },
           {
             text: 'Koszta jakie ponosimy:',
             list: {
               points: [
-                { text: 'Nakłady pracy', },
-                { text: 'Pieniądze', },
-                { text: 'Opóźnienia', },
+                { text: 'Nakłady pracy' },
+                { text: 'Pieniądze' },
+                { text: 'Opóźnienia' },
               ],
-              type: 'unordered'
+              type: 'unordered',
             },
-          }
+          },
 
         ],
         listType: 'unordered',
@@ -139,18 +140,18 @@ export const slides: Step[] = [
           {
             component: CostGraph,
 
-          }
+          },
         ],
-        minWidth: '400px'
-      }
-    }
+        minWidth: '400px',
+      },
+    },
   },
   {
     id: 'microinteractions-section',
     component: SectionTitle,
     inputs: {
-      title: 'Mikrointerakcje i animacje'
-    }
+      title: 'Mikrointerakcje i animacje',
+    },
   },
   // {
   //   component: Slide,
@@ -178,22 +179,22 @@ export const slides: Step[] = [
             text: 'When to:',
             list: {
               points: [
-                { text: 'kiedy animacje podkreślają akcje użytkownika', },
-                { text: 'kiedy są dodatkiem a nie główną częścią', },
+                { text: 'kiedy animacje podkreślają akcje użytkownika' },
+                { text: 'kiedy są dodatkiem a nie główną częścią' },
               ],
               type: 'unordered',
-            }
+            },
           },
           {
             text: 'When <u>not</u> to:',
             list: {
               points: [
-                { text: 'kiedy animacje odrywają uwagę od kontentu', },
-                { text: 'kiedy są oderwane od marki', },
-                { text: 'kiedy strona przestaje być responsywna', },
+                { text: 'kiedy animacje odrywają uwagę od kontentu' },
+                { text: 'kiedy są oderwane od marki' },
+                { text: 'kiedy strona przestaje być responsywna' },
               ],
               type: 'unordered',
-            }
+            },
           },
         ],
         listType: 'unordered',
@@ -201,14 +202,14 @@ export const slides: Step[] = [
       rightSideContent: {
         listTitle: 'Możliwości:',
         listPoints: [
-          { text: 'CSS Animations', },
-          { text: 'CSS Transitions', },
-          { text: 'JS Animations', },
+          { text: 'CSS Animations' },
+          { text: 'CSS Transitions' },
+          { text: 'JS Animations' },
         ],
         listType: 'unordered',
         alignItems: 'flex-start',
-        justifyContent: 'flex-start'
-      }
+        justifyContent: 'flex-start',
+      },
     },
   },
   {
@@ -222,27 +223,27 @@ export const slides: Step[] = [
             component: Button,
             inputs: {
               icon: 'ph-tag-simple',
-              text: 'Classic'
-            }
+              text: 'Classic',
+            },
           },
           {
             component: Button,
             inputs: {
               icon: 'ph-arrow-right',
               text: 'Simple',
-              animation: 'simple'
-            }
+              animation: 'simple',
+            },
           },
           {
             component: Button,
             inputs: {
               icon: 'ph-bezier-curve',
               text: 'Shake',
-              animation: 'shake'
-            }
+              animation: 'shake',
+            },
           }],
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       },
       rightSideContent: {
         components: [{
@@ -258,16 +259,16 @@ export const slides: Step[] = [
         }],
         minWidth: '700px',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       },
-    }
+    },
   },
   {
     id: 'colors-system-section',
     component: SectionTitle,
     inputs: {
-      title: 'Systemy kolorów'
-    }
+      title: 'Systemy kolorów',
+    },
   },
   {
     id: 'colors-system-roles',
@@ -277,22 +278,22 @@ export const slides: Step[] = [
       leftSideContent: {
         listTitle: 'Podział na:',
         listPoints: [
-          { text: 'akcenty', },
-          { text: 'baza/neutralne', },
-          { text: 'informacyjne', },
+          { text: 'akcenty' },
+          { text: 'baza/neutralne' },
+          { text: 'informacyjne' },
         ],
         listType: 'unordered',
       },
       rightSideContent: {
         listTitle: 'Inny podział:',
         listPoints: [
-          { text: 'marki', },
-          { text: 'systemowe', },
-          { text: 'sematyczne', },
+          { text: 'marki' },
+          { text: 'systemowe' },
+          { text: 'sematyczne' },
         ],
         listType: 'unordered',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
       },
     },
   },
@@ -303,10 +304,10 @@ export const slides: Step[] = [
       title: 'Dlaczego tworzenie systemu kolorów aplikacji ma znaczenie?',
       leftSideContent: {
         listPoints: [
-          { text: 'rebranding aplikacji', },
-          { text: '<i>Hardcoded hell</i>', },
-          { text: 'wsparcie dla osób niepełnosprawnych', },
-          { text: 'możliwość łatwego dostosowania styli z poziomu UI', },
+          { text: 'rebranding aplikacji' },
+          { text: '<i>Hardcoded hell</i>' },
+          { text: 'wsparcie dla osób niepełnosprawnych' },
+          { text: 'możliwość łatwego dostosowania styli z poziomu UI' },
         ],
         listType: 'unordered',
       },
@@ -318,10 +319,10 @@ export const slides: Step[] = [
             text4: 'rgb(25,25,25)',
             text2: '#191919',
             text1: 'black',
-          }
+          },
         }],
         justifyContent: 'center',
-      }
+      },
     },
   },
   // {
@@ -345,20 +346,20 @@ export const slides: Step[] = [
       leftSideContent: {
         listTitle: 'Od strony designu:',
         listPoints: [
-          { text: 'Hierarchia kolorów - Zasada 60-30-10', },
-          { text: 'Tokenizacja', },
+          { text: 'Hierarchia kolorów - Zasada 60-30-10' },
+          { text: 'Tokenizacja' },
           { text: 'Spełnienie Accessibility - <i>Contrast Ratio</i>' },
           {
             text: 'Przygotowanie komponentów w różnych stanach',
             list: {
               points: [
-                { text: 'Przejścia', },
-                { text: 'Kolory', },
-                { text: 'Kształty' }
+                { text: 'Przejścia' },
+                { text: 'Kolory' },
+                { text: 'Kształty' },
               ],
-              type: 'unordered'
-            }
-          }
+              type: 'unordered',
+            },
+          },
         ],
         listType: 'unordered',
       },
@@ -369,14 +370,14 @@ export const slides: Step[] = [
             text: 'Tokenizacja kolorów',
             list: {
               points: [
-                { text: 'Zmienne CSS', },
-                { text: 'Zmienne SCSS', },
+                { text: 'Zmienne CSS' },
+                { text: 'Zmienne SCSS' },
               ],
-              type: 'unordered'
-            }
+              type: 'unordered',
+            },
           },
           { text: 'Utrzymanie kolorów na poziomie roli, a nie akcji' },
-          { text: 'Często, upilnowanie designerów i ograniczanie ilości kolorów' }
+          { text: 'Często, upilnowanie designerów i ograniczanie ilości kolorów' },
         ],
         listType: 'unordered',
         justifyContent: 'flex-start',
@@ -409,24 +410,24 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.css',
             },
-            {
-              id: 'colors-css-2',
-              filePath: './components/examples/colors-css/modified.css',
-              value: 'scss',
-              text: 'modified.css',
-            },
-            {
-              id: 'colors-css-example-html',
-              filePath: './components/examples/colors-css/colors-css.html',
-              value: 'html',
-              text: 'HTML',
-            },
-            {
-              id: 'colors-css-example-ts',
-              filePath: './components/examples/colors-css/colors-css.ts',
-              value: 'ts',
-              text: 'TS',
-            },
+              {
+                id: 'colors-css-2',
+                filePath: './components/examples/colors-css/modified.css',
+                value: 'scss',
+                text: 'modified.css',
+              },
+              {
+                id: 'colors-css-example-html',
+                filePath: './components/examples/colors-css/colors-css.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'colors-css-example-ts',
+                filePath: './components/examples/colors-css/colors-css.ts',
+                value: 'ts',
+                text: 'TS',
+              },
             ],
           },
         }],
@@ -458,30 +459,30 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.scss',
             },
-            {
-              id: 'colors-scss-2',
-              filePath: './components/examples/colors-scss/modified.scss',
-              value: 'scss',
-              text: 'modified.scss',
-            },
-            {
-              id: 'colors-scss-3',
-              filePath: './components/examples/colors-scss/colors.scss',
-              value: 'scss',
-              text: 'colors.scss',
-            },
-            {
-              id: 'colors-scss-example-html',
-              filePath: './components/examples/colors-scss/colors-scss.html',
-              value: 'html',
-              text: 'HTML',
-            },
-            {
-              id: 'colors-scss-example-ts',
-              filePath: './components/examples/colors-scss/colors-scss.ts',
-              value: 'ts',
-              text: 'TS',
-            },
+              {
+                id: 'colors-scss-2',
+                filePath: './components/examples/colors-scss/modified.scss',
+                value: 'scss',
+                text: 'modified.scss',
+              },
+              {
+                id: 'colors-scss-3',
+                filePath: './components/examples/colors-scss/colors.scss',
+                value: 'scss',
+                text: 'colors.scss',
+              },
+              {
+                id: 'colors-scss-example-html',
+                filePath: './components/examples/colors-scss/colors-scss.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'colors-scss-example-ts',
+                filePath: './components/examples/colors-scss/colors-scss.ts',
+                value: 'ts',
+                text: 'TS',
+              },
             ],
           },
         }],
@@ -492,8 +493,8 @@ export const slides: Step[] = [
     id: 'typography-system-section',
     component: SectionTitle,
     inputs: {
-      title: 'Typografia'
-    }
+      title: 'Typografia',
+    },
   },
   {
     id: 'typography-system-importance',
@@ -502,10 +503,10 @@ export const slides: Step[] = [
       title: 'Dlaczego tworzenie systemu typografii aplikacji ma znaczenie?',
       leftSideContent: {
         listPoints: [
-          { text: 'rebranding aplikacji', },
-          { text: '<i>Hardcoded hell</i>', },
-          { text: 'wsparcie dla osób niepełnosprawnych', },
-          { text: 'możliwość łatwego dostosowania czcionek z poziomu UI', },
+          { text: 'rebranding aplikacji' },
+          { text: '<i>Hardcoded hell</i>' },
+          { text: 'wsparcie dla osób niepełnosprawnych' },
+          { text: 'możliwość łatwego dostosowania czcionek z poziomu UI' },
         ],
         listType: 'unordered',
       },
@@ -517,11 +518,11 @@ export const slides: Step[] = [
             text4: 'font-size',
             text2: 'font-weight',
             text1: 'font-family',
-            text3: 'line-height'
-          }
+            text3: 'line-height',
+          },
         }],
         justifyContent: 'center',
-      }
+      },
     },
   },
   {
@@ -535,9 +536,9 @@ export const slides: Step[] = [
             text: 'Wybór czcionek',
             list: {
               points: [
-                { text: 'Ograniczenie ilości czcionek do 2-3', },
-                { text: 'Weryfikacja czcionek w kontekście marki', },
-                { text: 'Weryfikacja w kontekście założonych języków' }
+                { text: 'Ograniczenie ilości czcionek do 2-3' },
+                { text: 'Weryfikacja czcionek w kontekście marki' },
+                { text: 'Weryfikacja w kontekście założonych języków' },
               ],
               type: 'unordered',
             },
@@ -547,9 +548,9 @@ export const slides: Step[] = [
             text: 'Dobór rozmiaru',
             list: {
               points: [
-                { text: 'Font weight', },
-                { text: 'Line height', },
-                { text: 'Font size' }
+                { text: 'Font weight' },
+                { text: 'Line height' },
+                { text: 'Font size' },
               ],
               type: 'unordered',
             },
@@ -558,13 +559,13 @@ export const slides: Step[] = [
             text: 'Performance',
             list: {
               points: [
-                { text: 'Dynamiczne skalowanie rozmiaru', },
-                { text: 'Ładowanie czcionek', },
+                { text: 'Dynamiczne skalowanie rozmiaru' },
+                { text: 'Ładowanie czcionek' },
               ],
               type: 'unordered',
-            }
+            },
 
-          }
+          },
         ],
         listType: 'unordered',
       },
@@ -595,24 +596,24 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.css',
             },
-            {
-              id: 'css-2',
-              filePath: './components/examples/typography-css/modified.css',
-              value: 'scss',
-              text: 'modified.css',
-            },
-            {
-              id: 'css-example-html',
-              filePath: './components/examples/typography-css/typography-css.html',
-              value: 'html',
-              text: 'HTML',
-            },
-            {
-              id: 'css-example-ts',
-              filePath: './components/examples/typography-css/typography-css.ts',
-              value: 'ts',
-              text: 'TS',
-            },
+              {
+                id: 'css-2',
+                filePath: './components/examples/typography-css/modified.css',
+                value: 'scss',
+                text: 'modified.css',
+              },
+              {
+                id: 'css-example-html',
+                filePath: './components/examples/typography-css/typography-css.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'css-example-ts',
+                filePath: './components/examples/typography-css/typography-css.ts',
+                value: 'ts',
+                text: 'TS',
+              },
             ],
           },
         }],
@@ -644,30 +645,30 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'base.scss',
             },
-            {
-              id: 'scss-2',
-              filePath: './components/examples/typography-scss/modified.scss',
-              value: 'scss',
-              text: 'modified.scss',
-            },
-            {
-              id: 'scss-3',
-              filePath: './components/examples/typography-scss/typography.scss',
-              value: 'scss',
-              text: 'typography.scss',
-            },
-            {
-              id: 'scss-example-html',
-              filePath: './components/examples/typography-scss/typography-scss.html',
-              value: 'html',
-              text: 'HTML',
-            },
-            {
-              id: 'scss-example-ts',
-              filePath: './components/examples/typography-scss/typography-scss.ts',
-              value: 'ts',
-              text: 'TS',
-            },
+              {
+                id: 'scss-2',
+                filePath: './components/examples/typography-scss/modified.scss',
+                value: 'scss',
+                text: 'modified.scss',
+              },
+              {
+                id: 'scss-3',
+                filePath: './components/examples/typography-scss/typography.scss',
+                value: 'scss',
+                text: 'typography.scss',
+              },
+              {
+                id: 'scss-example-html',
+                filePath: './components/examples/typography-scss/typography-scss.html',
+                value: 'html',
+                text: 'HTML',
+              },
+              {
+                id: 'scss-example-ts',
+                filePath: './components/examples/typography-scss/typography-scss.ts',
+                value: 'ts',
+                text: 'TS',
+              },
             ],
           },
         }],
@@ -678,8 +679,8 @@ export const slides: Step[] = [
     id: 'accessibility-section',
     component: SectionTitle,
     inputs: {
-      title: 'Dostepność (Accessibility)'
-    }
+      title: 'Dostepność (Accessibility)',
+    },
   },
   {
     id: 'accessibility-key-elements',
@@ -688,18 +689,18 @@ export const slides: Step[] = [
       title: 'Kluczowe elementy implementacyjne',
       leftSideContent: {
         listPoints: [
-          { text: 'Korzystanie z <i>natywnych</i> elementów HTML\'owych', },
-          { text: 'Wszystkie funkcje są dostępne tylko za pomocą klawiatury', },
-          { text: 'Alternatywny tekst dla zdjęć, transkrypt dla audio/wideo', },
-          { text: 'Opisy dla elementów formularzowych', },
-          { text: 'Odpowiednie ustawienie języka dla treści na stronie' }
+          { text: 'Korzystanie z <i>natywnych</i> elementów HTML\'owych' },
+          { text: 'Wszystkie funkcje są dostępne tylko za pomocą klawiatury' },
+          { text: 'Alternatywny tekst dla zdjęć, transkrypt dla audio/wideo' },
+          { text: 'Opisy dla elementów formularzowych' },
+          { text: 'Odpowiednie ustawienie języka dla treści na stronie' },
         ],
         listType: 'unordered',
       },
       rightSideContent: {
         justifyContent: 'center',
-        listTitle: '<div class="text-centered"><h1 class="md-typescale-display-small text-primary">WCAG</h1> <span class="md-typescale-headline-small text-centered">Web Content Accessibility Guidelines</span></div>'
-      }
+        listTitle: '<div class="text-centered"><h1 class="md-typescale-display-small text-primary">WCAG</h1> <span class="md-typescale-headline-small text-centered">Web Content Accessibility Guidelines</span></div>',
+      },
     },
   },
   {
@@ -709,10 +710,10 @@ export const slides: Step[] = [
       title: 'Tworzenie własnych elementów',
       leftSideContent: {
         listPoints: [
-          { text: 'Implementacja stanów - hover, pressed i focused', },
-          { text: 'Implementacja obsługi za pomocą klawiatury', },
-          { text: 'Dodanie atrybutów ARIA', },
-          { text: 'Dodanie wsparcia dla czytników ekranów' }
+          { text: 'Implementacja stanów - hover, pressed i focused' },
+          { text: 'Implementacja obsługi za pomocą klawiatury' },
+          { text: 'Dodanie atrybutów ARIA' },
+          { text: 'Dodanie wsparcia dla czytników ekranów' },
         ],
         listType: 'unordered',
       },
@@ -722,8 +723,8 @@ export const slides: Step[] = [
     id: 'accessibility-testing-section',
     component: SectionTitle,
     inputs: {
-      title: 'Testing'
-    }
+      title: 'Testing',
+    },
   },
   {
     id: 'accessibility-testing-tools',
@@ -732,10 +733,10 @@ export const slides: Step[] = [
       title: 'Weryfikacja implementacji za pomocą różnych narzędzi',
       leftSideContent: {
         listPoints: [
-          { text: 'Contrast checkers - najlepiej na poziomie projektowania', },
-          { text: 'Lighthouse w Chrome, Audit w Safari', },
-          { text: 'Playwright AXE', },
-          { text: 'Storybook Accessibility Addon' }
+          { text: 'Contrast checkers - najlepiej na poziomie projektowania' },
+          { text: 'Lighthouse w Chrome, Audit w Safari' },
+          { text: 'Playwright AXE' },
+          { text: 'Storybook Accessibility Addon' },
         ],
         listType: 'unordered',
       },
@@ -745,11 +746,11 @@ export const slides: Step[] = [
           inputs: {
             mainPictureLink: './lighthouse.png',
             leftPictureLink: './storybook.svg',
-            topPictureLink: './playwright.svg'
-          }
+            topPictureLink: './playwright.svg',
+          },
         }],
-        minWidth: '450px'
-      }
+        minWidth: '450px',
+      },
     },
   },
   {
@@ -765,9 +766,10 @@ export const slides: Step[] = [
         components: [{
           component: ImageRenderer,
           inputs: {
-            imageSrc: './report.png'
-          }
-        }]
+            imageSrc: './report.png',
+            imageAlt: 'Raport Playwright AXE',
+          },
+        }],
       },
     },
   },
@@ -775,8 +777,8 @@ export const slides: Step[] = [
     id: 'summary-section',
     component: SectionTitle,
     inputs: {
-      title: 'Podsumowanie'
-    }
+      title: 'Podsumowanie',
+    },
   },
   {
     id: 'summary',
@@ -789,20 +791,20 @@ export const slides: Step[] = [
             text: 'Tworzenie systemu kolorów, typografii od początku tworzenia aplikacji',
             list: {
               points: [
-                { text: 'Od klienta', },
-                { text: 'Przez design', },
-                { text: 'Do implementacji' }
+                { text: 'Od klienta' },
+                { text: 'Przez design' },
+                { text: 'Do implementacji' },
               ],
-              type: 'unordered'
-            }
+              type: 'unordered',
+            },
           },
-          { text: 'Planowanie accessibility na początku, a nie w trakcie budowania systemu', },
+          { text: 'Planowanie accessibility na początku, a nie w trakcie budowania systemu' },
           {
             text: 'Testowanie rozwiązania odpowiednimi narzędziami',
             points: [
-              { text: 'Na różnych urządzeniach', },
-              { text: 'Z różnymi użytkownikami', },
-              { text: 'Na grupie docelowej' }
+              { text: 'Na różnych urządzeniach' },
+              { text: 'Z różnymi użytkownikami' },
+              { text: 'Na grupie docelowej' },
             ],
           },
         ],
@@ -827,7 +829,7 @@ export const slides: Step[] = [
             cardTitle: 'Produkcja',
             cardDescription: 'W Polsce Coca‑Cola pojawiła się już w 1957 roku na Targach Poznańskich, jednak nie trafiła jeszcze do sklepów. Butelki wyprodukowane i napełnione w naszym kraju zjechały z linii produkcyjnej w 1972 roku. Pierwszego dnia sprzedaży "spragnieni" klienci w ciągu godziny wykupili ponad 5 tysięcy sztuk Coca-Coli!',
             tags: ['Coca‑Cola Original', 'Coca‑Cola Cherry'],
-          }
+          },
         }],
       },
       rightSideContent: {
@@ -842,7 +844,7 @@ export const slides: Step[] = [
             cardTitle: 'Produkcja',
             cardDescription: 'Napój Sprite został wprowadzony na rynek w USA w 1961 roku, w Polsce od 1991 roku. Jest to odpowiedź firmy na popularny napój 7 Up firmy Pepsi. Sprite produkowany jest w całej Europie i może być słodzony cukrem lub kombinacją cukru i niskokalorycznych substancji słodzących.',
             tags: ['Sprite', 'Sprite Zero'],
-          }
+          },
         }],
       },
     },
@@ -863,35 +865,35 @@ export const slides: Step[] = [
               value: 'scss',
               text: 'brand 1 - light.scss',
             },
-            {
-              id: 'brand1-style',
-              filePath: './styles/brand1/style.scss',
-              value: 'scss',
-              text: 'brand 1 - style.scss',
-            },
-            {
-              id: 'brand2-light',
-              filePath: './styles/brand2/light.scss',
-              value: 'scss',
-              text: 'brand 2 - light.scss',
-            },
-            {
-              id: 'brand2-style',
-              filePath: './styles/brand2/style.scss',
-              value: 'scss',
-              text: 'brand 2 - style.scss',
-            }],
+              {
+                id: 'brand1-style',
+                filePath: './styles/brand1/style.scss',
+                value: 'scss',
+                text: 'brand 1 - style.scss',
+              },
+              {
+                id: 'brand2-light',
+                filePath: './styles/brand2/light.scss',
+                value: 'scss',
+                text: 'brand 2 - light.scss',
+              },
+              {
+                id: 'brand2-style',
+                filePath: './styles/brand2/style.scss',
+                value: 'scss',
+                text: 'brand 2 - style.scss',
+              }],
           },
         }],
-        alignItems: 'center'
+        alignItems: 'center',
       },
-    }
+    },
   },
   {
     id: 'q-and-a',
     component: SectionTitle,
     inputs: {
-      title: 'Q & A'
-    }
+      title: 'Q & A',
+    },
   },
 ];
