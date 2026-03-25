@@ -503,8 +503,8 @@ export const slides: Step[] = [
       title: 'Dlaczego tworzenie systemu typografii aplikacji ma znaczenie?',
       leftSideContent: {
         listPoints: [
-          { text: 'rebranding aplikacji' },
           { text: '<i>Hardcoded hell</i>' },
+          { text: 'rebranding aplikacji' },
           { text: 'wsparcie dla osób niepełnosprawnych' },
           { text: 'możliwość łatwego dostosowania czcionek z poziomu UI' },
         ],
@@ -533,34 +533,34 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           {
-            text: 'Wybór czcionek',
+            text: 'Rodzina czcionek',
             list: {
               points: [
-                { text: 'Ograniczenie ilości czcionek do 2-3' },
-                { text: 'Weryfikacja czcionek w kontekście marki' },
-                { text: 'Weryfikacja w kontekście założonych języków' },
+                { text: 'ograniczenie ilości czcionek do 2-3' },
+                { text: 'weryfikacja czcionek w kontekście marki/produktu' },
+                { text: 'weryfikacja w kontekście założonych języków' },
               ],
               type: 'unordered',
             },
 
           },
           {
-            text: 'Dobór rozmiaru',
+            text: 'Rozmiar',
             list: {
               points: [
-                { text: 'Font weight' },
-                { text: 'Line height' },
-                { text: 'Font size' },
+                { text: 'grubość czcionki' },
+                { text: 'wysokość linii' },
+                { text: 'wielkość czcionki' },
               ],
               type: 'unordered',
             },
           },
           {
-            text: 'Performance',
+            text: 'Wydajność',
             list: {
               points: [
-                { text: 'Dynamiczne skalowanie rozmiaru' },
-                { text: 'Ładowanie czcionek' },
+                { text: 'dynamiczne skalowanie rozmiaru' },
+                { text: 'ładowanie czcionek' },
               ],
               type: 'unordered',
             },
@@ -694,6 +694,17 @@ export const slides: Step[] = [
           { text: 'Alternatywny tekst dla zdjęć, transkrypt dla audio/wideo' },
           { text: 'Opisy dla elementów formularzowych' },
           { text: 'Odpowiednie ustawienie języka dla treści na stronie' },
+          {
+            text: 'Tworzenie własnych elementów',
+            list: {
+              points: [
+                { text: 'Implementacja stanów - hover, pressed i focused' },
+                { text: 'Implementacja obsługi za pomocą klawiatury' },
+                { text: 'Dodanie wsparcia dla czytników ekranów' },
+              ],
+              type: 'unordered',
+            },
+          }
         ],
         listType: 'unordered',
       },
@@ -704,26 +715,10 @@ export const slides: Step[] = [
     },
   },
   {
-    id: 'accessibility-custom-elements',
-    component: Slide,
-    inputs: {
-      title: 'Tworzenie własnych elementów',
-      leftSideContent: {
-        listPoints: [
-          { text: 'Implementacja stanów - hover, pressed i focused' },
-          { text: 'Implementacja obsługi za pomocą klawiatury' },
-          { text: 'Dodanie atrybutów ARIA' },
-          { text: 'Dodanie wsparcia dla czytników ekranów' },
-        ],
-        listType: 'unordered',
-      },
-    },
-  },
-  {
     id: 'accessibility-testing-section',
     component: SectionTitle,
     inputs: {
-      title: 'Testing',
+      title: 'Testowanie strony pod kątem dostępności',
     },
   },
   {
