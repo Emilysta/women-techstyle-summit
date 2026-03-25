@@ -20,6 +20,7 @@ export const slides: Step[] = [
     id: 'start',
     component: Slide,
     inputs: {
+      title: 'Women TechStyle Summit 2026',
       leftSideContent: {
         alignItems: 'center',
         components: [{
