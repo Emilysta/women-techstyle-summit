@@ -293,7 +293,7 @@ export const slides: Step[] = [
           component: Graph,
           inputs: {
             centeredText: 'Color',
-            text4: 'rgb(25,25,25)',
+            text4: 'rgb(25 25 25)',
             text2: '#191919',
             text1: 'black',
           },
