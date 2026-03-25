@@ -83,7 +83,7 @@ export const slides: Step[] = [
         listType: 'ordered',
       },
     }
-  } ,
+  },
   {
     id: 'intro',
     component: SectionTitle,
@@ -99,7 +99,7 @@ export const slides: Step[] = [
       leftSideContent: {
         listTitle: 'Interfejs użytkownika to:',
         listPoints: [
-          { text: 'nie tylko <i>flat screen</i> i <i>design</i>' },
+          { text: 'nie tylko <i lang="en">flat screen</i> i <i lang="en">design</i>' },
           { text: 'kod, który działa "pod spodem"' },
           { text: 'sposób na interakcje z użytkownikiem' },
           { text: 'czytelna i dostępna zawartość' },
@@ -126,7 +126,7 @@ export const slides: Step[] = [
     id: 'project-decisions',
     component: Slide,
     inputs: {
-      title: 'Złe decyzje projektowe a ich koszta',
+      title: 'Decyzje projektowe a ich koszta',
       leftSideContent: {
         listPoints: [
           {
@@ -141,12 +141,12 @@ export const slides: Step[] = [
             },
           },
           {
-            text: 'Koszta jakie ponosimy:',
+            text: 'Koszt:',
             list: {
               points: [
-                { text: 'Nakłady pracy' },
-                { text: 'Pieniądze' },
-                { text: 'Opóźnienia' },
+                { text: 'nakład pracy' },
+                { text: 'pieniądze' },
+                { text: 'czas' },
               ],
               type: 'unordered',
             },
@@ -159,7 +159,6 @@ export const slides: Step[] = [
         components: [
           {
             component: CostGraph,
-
           },
         ],
         minWidth: '400px',
@@ -173,21 +172,6 @@ export const slides: Step[] = [
       title: 'Mikrointerakcje i animacje',
     },
   },
-  // {
-  //   component: Slide,
-  //   inputs: {
-  //     title: 'Mikrointerakcje i animacje',
-  //     leftSideContent: {
-  //       listTitle: 'To czy użyć animacji czy też nie, zależy od:',
-  //       listPoints: [
-  //         { text: 'jaką akcje chcesz wykonać', },
-  //         { text: 'do kogo skierowany jest kontent', },
-  //         { text: 'co chcesz zaznaczyć', },
-  //       ],
-  //       listType: 'unordered',
-  //     },
-  //   }
-  // },
   {
     id: 'microinteractions',
     component: Slide,
@@ -196,22 +180,22 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           {
-            text: 'When to:',
+            text: 'Kiedy stosować:',
             list: {
               points: [
-                { text: 'kiedy animacje podkreślają akcje użytkownika' },
-                { text: 'kiedy są dodatkiem a nie główną częścią' },
+                { text: 'gdy animacje podkreślają akcje użytkownika' },
+                { text: 'gdy są dodatkiem, a nie główną częścią' },
               ],
               type: 'unordered',
             },
           },
           {
-            text: 'When <u>not</u> to:',
+            text: 'Kiedy <u>nie</u> stosować:',
             list: {
               points: [
-                { text: 'kiedy animacje odrywają uwagę od kontentu' },
-                { text: 'kiedy są oderwane od marki' },
-                { text: 'kiedy strona przestaje być responsywna' },
+                { text: 'gdy animacje odrywają uwagę od zawartości' },
+                { text: 'gdy nie są spójne z produktem' },
+                { text: 'gdy strona przestaje być responsywna' },
               ],
               type: 'unordered',
             },
@@ -220,11 +204,11 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        listTitle: 'Możliwości:',
+        listTitle: 'Możliwe opcje:',
         listPoints: [
-          { text: 'CSS Animations' },
-          { text: 'CSS Transitions' },
-          { text: 'JS Animations' },
+          { text: 'animacje CSS' },
+          { text: 'przejście CSS' },
+          { text: 'animacje JS' },
         ],
         listType: 'unordered',
         alignItems: 'flex-start',
@@ -243,14 +227,14 @@ export const slides: Step[] = [
             component: Button,
             inputs: {
               icon: 'ph-tag-simple',
-              text: 'Classic',
+              text: 'Klasyczna',
             },
           },
           {
             component: Button,
             inputs: {
               icon: 'ph-arrow-right',
-              text: 'Simple',
+              text: 'Prosta',
               animation: 'simple',
             },
           },
@@ -297,10 +281,10 @@ export const slides: Step[] = [
       title: 'Dlaczego tworzenie systemu kolorów aplikacji ma znaczenie?',
       leftSideContent: {
         listPoints: [
-          { text: '<i>Hardcoded hell</i>' },
+          { text: '<i lang="en">hardcoded hell</i>' },
           { text: 'rebranding aplikacji' },
           { text: 'wsparcie dla osób niepełnosprawnych' },
-          { text: 'możliwość łatwego dostosowania styli z poziomu UI' },
+          { text: 'możliwość łatwego dostosowania styli z poziomu interfejsu użytkownika' },
         ],
         listType: 'unordered',
       },
@@ -319,64 +303,37 @@ export const slides: Step[] = [
     },
   },
   {
-    id: 'colors-system-roles',
-    component: Slide,
-    inputs: {
-      title: 'Rola kolorów',
-      leftSideContent: {
-        listTitle: 'Podział na:',
-        listPoints: [
-          { text: 'akcenty' },
-          { text: 'baza/neutralne' },
-          { text: 'informacyjne' },
-        ],
-        listType: 'unordered',
-      },
-      rightSideContent: {
-        listTitle: 'Inny podział:',
-        listPoints: [
-          { text: 'marki' },
-          { text: 'systemowe' },
-          { text: 'sematyczne' },
-        ],
-        listType: 'unordered',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-      },
-    },
-  },
-
-  // {
-  //   component: Slide,
-  //   inputs: {
-  //     title: 'Budowanie systemu kolorów',
-  //     leftSideContent: {
-  //       listPoints: [
-  //         { text: 'zaczyna się od designu', },
-  //         { text: 'dopiero potem zależy od developerów', },
-  //       ],
-  //       listType: 'unordered',
-  //     },
-  //   },
-  // },
-  {
     id: 'colors-system-design',
     component: Slide,
     inputs: {
       title: 'Budowanie systemu kolorów',
       leftSideContent: {
-        listTitle: 'Od strony designu:',
         listPoints: [
-          { text: 'Hierarchia kolorów - Zasada 60-30-10' },
-          { text: 'Tokenizacja' },
-          { text: 'Spełnienie Accessibility - <i>Contrast Ratio</i>' },
           {
-            text: 'Przygotowanie komponentów w różnych stanach',
+            text: 'Od strony designu:',
             list: {
               points: [
-                { text: 'Przejścia' },
-                { text: 'Kolory' },
-                { text: 'Kształty' },
+                {
+                  text: 'wybór kolorów',
+                  list: {
+                    points: [
+                      { text: 'dostępność' },
+                      { text: 'zasada 60-30-10' },
+                    ],
+                    type: 'unordered',
+                  },
+                },
+                { text: 'przypisanie odpowiedniej roli do koloru', },
+              ],
+              type: 'unordered',
+            },
+          },
+          {
+            text: 'Od strony kodu:',
+            list: {
+              points: [
+                { text: 'tokenizacja kolorów' },
+                { text: 'konsekwentne stosowanie jednego źródła' },
               ],
               type: 'unordered',
             },
@@ -385,19 +342,19 @@ export const slides: Step[] = [
         listType: 'unordered',
       },
       rightSideContent: {
-        listTitle: 'Od strony kodu:',
         listPoints: [
           {
-            text: 'Tokenizacja kolorów i kształtów',
+            text: 'Role kolorów',
             list: {
               points: [
-                { text: 'Zmienne CSS' },
-                { text: 'Zmienne SCSS' },
+                { text: 'akcenty - produktowe', },
+                { text: 'neutralne - systemowe' },
+                { text: 'informacyjne - semantyczne' },
               ],
               type: 'unordered',
             },
           },
-          { text: 'Utrzymanie kolorów z jednego źródła' },
+
         ],
         listType: 'unordered',
         justifyContent: 'flex-start',
@@ -523,10 +480,11 @@ export const slides: Step[] = [
       title: 'Dlaczego tworzenie systemu typografii aplikacji ma znaczenie?',
       leftSideContent: {
         listPoints: [
-          { text: '<i>Hardcoded hell</i>' },
+          { text: '<i lang="en">hardcoded hell</i>' },
           { text: 'rebranding aplikacji' },
           { text: 'wsparcie dla osób niepełnosprawnych' },
-          { text: 'możliwość łatwego dostosowania czcionek z poziomu UI' },
+          { text: 'możliwość łatwego dostosowania czcionek z poziomu interfejsu' },
+          { text: 'zmiana wsparcia dla danego języka' }
         ],
         listType: 'unordered',
       },
@@ -710,7 +668,7 @@ export const slides: Step[] = [
       leftSideContent: {
         listPoints: [
           { text: 'Korzystanie z <i>natywnych</i> elementów HTML\'owych' },
-          { text: 'Wszystkie funkcje są dostępne tylko za pomocą klawiatury' },
+          { text: 'Wszystkie funkcje są dostępne za pomocą klawiatury' },
           { text: 'Alternatywny tekst dla zdjęć, transkrypt dla audio/wideo' },
           { text: 'Opisy dla elementów formularzowych' },
           { text: 'Odpowiednie ustawienie języka dla treści na stronie' },
@@ -718,9 +676,9 @@ export const slides: Step[] = [
             text: 'Tworzenie własnych elementów',
             list: {
               points: [
-                { text: 'Implementacja stanów - hover, pressed i focused' },
-                { text: 'Implementacja obsługi za pomocą klawiatury' },
-                { text: 'Dodanie wsparcia dla czytników ekranów' },
+                { text: 'implementacja stanów - hover, pressed i focused' },
+                { text: 'implementacja obsługi za pomocą klawiatury' },
+                { text: 'dodanie wsparcia dla czytników ekranów' },
               ],
               type: 'unordered',
             },
@@ -730,7 +688,7 @@ export const slides: Step[] = [
       },
       rightSideContent: {
         justifyContent: 'center',
-        listTitle: '<div class="text-centered"><h1 class="md-typescale-display-small text-primary">WCAG</h1> <span class="md-typescale-headline-small text-centered">Web Content Accessibility Guidelines</span></div>',
+        listTitle: '<div class="text-centered" lang="en"><h1 class="md-typescale-display-small text-primary">WCAG</h1> <span class="md-typescale-headline-small text-centered">Web Content Accessibility Guidelines</span></div>',
       },
     },
   },
@@ -748,7 +706,7 @@ export const slides: Step[] = [
       title: 'Weryfikacja implementacji za pomocą różnych narzędzi',
       leftSideContent: {
         listPoints: [
-          { text: 'Contrast checkers - najlepiej na poziomie projektowania' },
+          { text: '<i lang="en">Contrast checkers</i> - najlepiej na poziomie projektowania' },
           { text: 'Lighthouse w Chrome, Audit w Safari' },
           { text: 'Playwright AXE' },
           { text: 'Storybook Accessibility Addon' },
@@ -806,20 +764,20 @@ export const slides: Step[] = [
             text: 'Tworzenie systemu kolorów, typografii od początku tworzenia aplikacji',
             list: {
               points: [
-                { text: 'Od klienta' },
-                { text: 'Przez design' },
-                { text: 'Do implementacji' },
+                { text: 'od klienta' },
+                { text: 'przez design' },
+                { text: 'do implementacji' },
               ],
               type: 'unordered',
             },
           },
-          { text: 'Planowanie accessibility na początku, a nie w trakcie budowania systemu' },
+          { text: 'Uwzględnienie dostępności na początku, a nie w trakcie budowania systemu' },
           {
             text: 'Testowanie rozwiązania odpowiednimi narzędziami',
             points: [
-              { text: 'Na różnych urządzeniach' },
-              { text: 'Z różnymi użytkownikami' },
-              { text: 'Na grupie docelowej' },
+              { text: 'na różnych urządzeniach' },
+              { text: 'z różnymi użytkownikami' },
+              { text: 'na grupie docelowej' },
             ],
           },
         ],
@@ -831,7 +789,7 @@ export const slides: Step[] = [
     id: 'real-life-example',
     component: Slide,
     inputs: {
-      title: 'Przykład real life',
+      title: 'Przykład',
       leftSideContent: {
         minWidth: '450px',
         components: [{
@@ -868,7 +826,7 @@ export const slides: Step[] = [
     id: 'real-life-example-code',
     component: Slide,
     inputs: {
-      title: 'Przykład real life',
+      title: 'Przykład - kod',
       leftSideContent: {
         components: [{
           component: CompleteCodeRenderer,
