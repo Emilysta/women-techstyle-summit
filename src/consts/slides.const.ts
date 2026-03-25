@@ -65,6 +65,25 @@ export const slides: Step[] = [
     },
   },
   {
+    id: 'pres-plan',
+    component: Slide,
+    inputs: {
+      title: 'Plan prezentacji',
+      leftSideContent: {
+        listPoints: [
+          { text: 'Wprowadzenie' },
+          { text: 'Mikrointerakcje i animacje' },
+          { text: 'Systemy kolorów' },
+          { text: 'Typografia' },
+          { text: 'Accessiblity' },
+          { text: 'Testowanie' },
+          { text: 'Podsumowanie' },
+        ],
+        listType: 'ordered',
+      },
+    }
+  } ,
+  {
     id: 'intro',
     component: SectionTitle,
     inputs: {
