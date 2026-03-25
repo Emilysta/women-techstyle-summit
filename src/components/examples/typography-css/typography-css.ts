@@ -9,7 +9,8 @@ import { Button, ButtonGroup } from "../../button-group/button-group";
   templateUrl: './typography-css.html',
   styleUrl: './typography-css.scss',
   host: {
-    '[style.font-size]': 'currentFontSize().value'
+    '[style.font-size]': 'currentFontSize().value',
+    'lang': 'en'
   }
 })
 export class TypographyCss {

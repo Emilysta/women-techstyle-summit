@@ -7,6 +7,9 @@ import { Button, ButtonGroup } from "../../button-group/button-group";
   imports: [ButtonGroup],
   templateUrl: './colors-css.html',
   styleUrl: './colors-css.scss',
+  host: {
+    'lang': 'en'
+  }
 })
 export class ColorsCss {
   public readonly currentColor = model<Button>(colorOptions[0]);
