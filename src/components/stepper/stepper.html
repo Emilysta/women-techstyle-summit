@@ -1,7 +1,7 @@
 <div [class]="variant()">
   <app-icon-button icon="ph-arrow-left" variant="transparent" (buttonClick)="previous()"
-    ariaLabel="previous step"></app-icon-button>
+    ariaLabel="Poprzedni krok"></app-icon-button>
   <span class="md-typescale-label-medium">{{ (currentStepIndex() + 1) + ' / ' + allSteps().length }}</span>
   <app-icon-button icon="ph-arrow-right" variant="transparent" (buttonClick)="next()"
-    ariaLabel="next step"></app-icon-button>
+    ariaLabel="Następny krok"></app-icon-button>
 </div>
