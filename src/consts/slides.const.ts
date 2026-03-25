@@ -135,7 +135,7 @@ export const slides: Step[] = [
               points: [
                 { text: 'tokenizacja czcionek' },
                 { text: 'tokenizacja kolorów' },
-                { text: 'wsparcie accessibility' },
+                { text: 'wsparcie dla dostępności' },
               ],
               type: 'unordered',
             },
@@ -482,9 +482,9 @@ export const slides: Step[] = [
         listPoints: [
           { text: '<i lang="en">hardcoded hell</i>' },
           { text: 'rebranding aplikacji' },
-          { text: 'wsparcie dla osób niepełnosprawnych' },
+          { text: 'możliwość dodania wsparcia dla osób niepełnosprawnych' },
           { text: 'możliwość łatwego dostosowania czcionek z poziomu interfejsu' },
-          { text: 'zmiana wsparcia dla danego języka' }
+          { text: 'możliwość łatwego dodania wsparcia dla danego języka' }
         ],
         listType: 'unordered',
       },
@@ -514,8 +514,8 @@ export const slides: Step[] = [
             text: 'Rodzina czcionek',
             list: {
               points: [
-                { text: 'ograniczenie ilości czcionek do 2-3' },
-                { text: 'weryfikacja czcionek w kontekście marki/produktu' },
+                { text: 'ograniczenie ilości do dwóch/trzech' },
+                { text: 'weryfikacja w kontekście produktu' },
                 { text: 'weryfikacja w kontekście założonych języków' },
               ],
               type: 'unordered',
