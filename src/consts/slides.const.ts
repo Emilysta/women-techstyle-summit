@@ -76,7 +76,7 @@ export const slides: Step[] = [
           { text: 'Mikrointerakcje i animacje' },
           { text: 'Systemy kolorów' },
           { text: 'Typografia' },
-          { text: 'Accessiblity' },
+          { text: 'Dostępność' },
           { text: 'Testowanie' },
           { text: 'Podsumowanie' },
         ],
